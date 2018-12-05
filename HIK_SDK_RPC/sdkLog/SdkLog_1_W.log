@@ -1,0 +1,14 @@
+[2018-12-04 17:25:30.695][INF] The COM:Core ver is 5.3.5.2, 2017_11_24. Async:1.
+[2018-12-04 17:25:30.695][INF] This hcnetsdk ver is 5.3.5.2 Ver 2017_11_24.
+[2018-12-04 17:25:30.699][INF] login dev 10.58.12.42:8000.
+[2018-12-04 17:25:32.339][ERR] Private connect 10.58.12.42:8000 sock=40 this=0x88118644 cmd=0x10000 sys_err=110, timeout= 1000
+[2018-12-04 17:25:32.340][ERR] [10.58.12.42:8000]LogonDevice Link_CreateLink fail[7].
+[2018-12-04 17:25:32.365][INF] AbilityAnalyze---Init-- start
+[2018-12-04 17:25:32.688][DBG] AbilityAnalyze---Init-- over, DeviceList path [/mnt/hgfs/VMwareShare/lib/HCNetSDKCom/LocalXml/DeviceList.xml], load result[0]
+[2018-12-04 17:25:32.688][INF] The COM:VoiceTalk ver is 5.3.5.2, 2017_11_24.
+[2018-12-04 17:25:32.701][INF] The COM:HCGeneralCfgMgr ver is 5.3.5.2, 2017_11_24.
+[2018-12-04 17:25:32.717][INF] The COM:HCPlayback ver is 5.3.5.2, 2017_11_24.
+[2018-12-04 17:25:32.736][INF] The COM:HCIndustry ver is 5.3.5.2, 2017_11_24.
+[2018-12-04 17:25:32.747][INF] The COM:HCDisplay ver is 5.3.5.2, 2017_11_24.
+[2018-12-04 17:25:32.755][INF] The COM:Preview ver is 5.3.5.2, 2017_11_24.
+[2018-12-04 17:25:32.774][INF] The COM:HCAlarm ver is 5.3.5.2, 2017_11_24.

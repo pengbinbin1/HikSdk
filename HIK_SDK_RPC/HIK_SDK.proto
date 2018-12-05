@@ -1,0 +1,114 @@
+// Copyright 2015 gRPC authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.HIKSDK";
+option java_outer_classname = "HIKSDK";
+option objc_class_prefix = "HLW";
+
+package HIK_SDK_P;
+
+// The HIK_SDK service definition.
+service HIKSDK {
+  // SDK Init
+  rpc Init(LoginInfo) returns (ErrCode){}
+  rpc Uninit(Empty) returns(ErrCode){}
+  rpc SaveFileByTime(SaveFileParam)returns(ErrCode){}
+  rpc SaveFileByName(SaveFileParam1)returns(ErrCode){}
+  rpc FindFileByTime(FindFileParam)returns(FileData){}
+  rpc GetDVRConfig(ConfParam)returns(DeviceList){}
+}
+
+// The request message containing the user's name.
+message LoginInfo {
+  string ip = 1;
+  uint32 port = 2;
+  string user = 3;
+  string passwd = 4;
+  bool useAsynLogin=5;  
+}
+
+//parameters about get config
+message ConfParam{
+  int32 command = 1;  //command
+  int32 group = 2;    //group num,start at 0,each group contain 64 channels
+}
+
+//param about device info
+message DeviceInfo{
+  int32 channel = 1;  // channel num
+  string ip = 2;      // device ip
+  uint32 port = 3;    // device port 
+  string user = 4;    // user name
+  string password= 5; // password   
+}
+
+//device list
+message DeviceList{
+  int32 err =1;
+  repeated DeviceInfo DeviceLists = 2;
+}
+
+//empty message
+message Empty{
+
+}
+
+//The time message
+message Time{
+	uint64 dwYear = 1;
+	uint64 dwMonth = 2;
+	uint64 dwDay = 3;
+	uint64 dwHour =4;
+	uint64 dwMinute =5;
+	uint64 dwSecond =6;
+
+}
+
+//The param about save file by time
+message SaveFileParam {
+	Time starttime = 1;
+	Time stoptime = 2;
+	int64 channel = 3;
+	string filename = 4;
+}
+
+//The param about save file by name 
+message SaveFileParam1{
+	string nvrfile = 1;
+	string desfile = 2;
+}
+
+//The data about found file
+message FileData{
+	string filename = 1;
+	Time starttime = 2;
+	Time stoptime = 3;
+	int64 filesize = 4;
+	int32 err = 5;
+}
+
+//The param about find file
+message FindFileParam{
+	Time starttime =1 ;
+	Time stoptime =2;
+	uint64 channel = 3;
+}
+
+// The response message 
+message ErrCode {
+  int32 errcode = 1;
+}
