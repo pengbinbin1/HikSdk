@@ -11,7 +11,8 @@
 
 #include "HIK_SDK.grpc.pb.h"
 #include "HIK_SDK.pb.h"
-#include "../HikSdk/HIK_SDK.h"
+#include "HIK_SDK.h"
+#include "upload_vod.h"
 
 using grpc::Server;
 using grpc::ServerBuilder;
@@ -28,13 +29,17 @@ using HIK_SDK_P::FileData;
 using HIK_SDK_P::ConfParam;
 using HIK_SDK_P::DeviceInfo;
 using HIK_SDK_P::DeviceList;
-
+using HIK_SDK_P::InitInfo;
+using HIK_SDK_P::Port;
+using HIK_SDK_P::UplodParam;
+using HIK_SDK_P::VideoId;
+using HIK_SDK_P::VideoURL;
+using HIK_SDK_P::VideoIdParam;
 // Logic and data behind the server's behavior.
 class HIKSDKServiceImpl final : public HIKSDK::Service {
-
 public:
 	Status Init(ServerContext* context, const LoginInfo* request,
-                  ErrCode* reply) override {
+                  InitInfo* reply) override {
 		int ret =0;
 		NET_DVR_USER_LOGIN_INFO login;
 		strcpy(login.sDeviceAddress,request->ip().c_str());
@@ -49,12 +54,15 @@ public:
 		NET_DVR_DEVICEINFO_V40 devinfo = {0};
 		ret = HIK_SDK::GetHikSdkInstance().Init(login,devinfo);
 		if (ret!= 0)
-		{
+        {
+            reply->set_devicesn("failed");
+            reply->set_devicetype(-1);
 			printf("Init failed,ret = %d\n",ret);
 		}else{
-			printf("Init success,ret = %d\n",ret);
+            reply->set_devicesn((char*)devinfo.struDeviceV30.sSerialNumber);
+            reply->set_devicetype(devinfo.struDeviceV30.wDevType);
 		}
-		reply->set_errcode(ret);
+        reply->set_err(ret);
 		return Status::OK;
   }
 
@@ -105,6 +113,50 @@ public:
 			response->set_errcode(ret);
 			return Status::OK;
 		}
+    Status UploadLocalFile(::grpc::ServerContext* context,const UplodParam* request,VideoId* response){
+        int ret = 0;
+        Access acce;
+        acce.AcessKey = request->access().accesskey();
+        acce.AcessKeySecret = request->access().accesskeysecret();
+        acce.RegionId = request->access().regionid();
+
+        File file;
+        file.FileName= request->filename();
+        file.Title = request->videotitle();
+        std::string videoId;
+        ret = UploadLocalVideo(acce,file,videoId);
+        if(ret != 0)
+        {
+            printf("@@@upload local video failed,err = %d,line=%d\n",ret,__LINE__);
+            response->set_err(ret);
+        }else {
+             printf("@@@upload local video success,line=%d\n",__LINE__);
+             response->set_videoid(videoId);
+             response->set_err(0);
+        }
+        return Status::OK;
+    }
+
+    Status GetVideoURL(::grpc::ServerContext* context,const VideoIdParam* request, VideoURL* response ){
+        int ret = 0;
+        std::string videoId = request->videoid();
+
+        Access acce;
+        acce.AcessKey = request->access().accesskey();
+        acce.AcessKeySecret = request->access().accesskeysecret();
+        acce.RegionId = request->access().regionid();
+        std::string URL;
+        ret = GetPlayURL(acce,videoId,URL);
+        if(ret!= 0){
+            printf("@@@get url failed,err = %d,line=%d\n",ret,__LINE__);
+            response->set_err(ret);
+        }else{
+             printf("@@@get url  success,line=%d\n",__LINE__);
+             response->set_err(0);
+             response->set_url(URL);
+        }
+        return  Status::OK;
+    }
     Status GetDVRConfig(::grpc::ServerContext* context, const ConfParam * request,
                         DeviceList* response){
         int ret = 0;
@@ -131,9 +183,47 @@ public:
                     deviceInfo->set_password((char*)deviceCfg.struIPDevInfo[i].sPassword);
                     deviceInfo->set_ip((char*)deviceCfg.struIPDevInfo[i].struIP.sIpV4);
                     deviceInfo->set_channel(i+dStartChan);
+
                 }
             }
         }
+        response->set_err(ret);
+
+        return Status::OK;
+    }
+
+    Status GetPort(::grpc::ServerContext* context, const ConfParam * request,
+                   Port* response){
+        int ret =0;
+        DWORD command = request->command();
+        NET_DVR_NAT_CFG deviceCfg;
+        ret = HIK_SDK::GetHikSdkInstance().GetPort(command,deviceCfg);
+        if (ret !=0)
+        {
+            printf("@@@get config failed,err = %d, line=%d\n",ret,__LINE__);
+        }else {
+            printf("@@@get config success,line = %d\n",__LINE__);
+            if(deviceCfg.struRtspPort.wEnable) // check is rtsp enable
+            {
+                response->set_rtsp(deviceCfg.struRtspPort.wExtPort);
+            }
+
+            if(deviceCfg.struHttpPort.wEnable) // check is http enable
+            {
+                response->set_http(deviceCfg.struHttpPort.wExtPort);
+            }
+
+            if(deviceCfg.struHttpsPort.wEnable) //check is https enable
+            {
+                response->set_https(deviceCfg.struHttpsPort.wExtPort);
+            }
+
+            if (deviceCfg.struCmdPort.wEnable) //check is cmd port enable
+            {
+                response->set_cmd(deviceCfg.struCmdPort.wExtPort);
+            }
+        }
+        response->set_err(ret);
         return Status::OK;
     }
 

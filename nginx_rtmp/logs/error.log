@@ -1,0 +1,150 @@
+2018/11/23 16:23:49 [error] 19262#0: *1 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2018/11/23 16:23:49 [error] 19262#0: *1 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2018/11/23 16:25:20 [error] 19262#0: *2 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2018/11/23 16:25:20 [error] 19262#0: *2 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2018/11/23 16:26:47 [error] 19468#0: *1 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8011"
+2018/11/23 16:26:47 [error] 19468#0: *1 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8011"
+2018/11/23 16:36:38 [error] 19512#0: *1 open() "/usr/local/nginx/html/test/v1" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /test/v1 HTTP/1.1", host: "localhost:8011"
+2018/11/23 16:38:31 [error] 19537#0: *1 open() "/usr/local/nginx/html/test/v1" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /test/v1 HTTP/1.1", host: "localhost:8011"
+2018/11/23 16:39:00 [error] 19537#0: *1 open() "/usr/local/nginx/html/test/v1" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /test/v1 HTTP/1.1", host: "localhost:8011"
+2018/11/23 16:39:28 [error] 19537#0: *1 open() "/usr/local/nginx/html/test" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /test HTTP/1.1", host: "localhost:8011"
+2018/11/23 16:39:36 [error] 19537#0: *1 open() "/usr/local/nginx/html/test/v1" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /test/v1 HTTP/1.1", host: "localhost:8011"
+2018/11/23 16:40:49 [error] 19549#0: *1 open() "/usr/local/nginx/html/test" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /test HTTP/1.1", host: "localhost:8011"
+2018/11/23 16:41:27 [error] 19549#0: *1 open() "/usr/local/nginx/html/tyest" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /tyest HTTP/1.1", host: "localhost:8011"
+2018/11/23 16:41:31 [error] 19549#0: *1 open() "/usr/local/nginx/html/test" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /test HTTP/1.1", host: "localhost:8011"
+2018/11/27 18:36:24 [error] 3989#0: *1 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8011"
+2018/11/27 18:36:24 [error] 3989#0: *1 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8011"
+2018/11/27 18:44:16 [emerg] 4135#0: unknown directive "rtmp" in /usr/local/nginx/conf/nginx.conf:17
+2018/11/27 18:58:16 [emerg] 4190#0: unknown directive "rtmp" in /usr/local/nginx/conf/nginx.conf:17
+2018/11/27 19:02:18 [notice] 7604#0: signal process started
+2018/11/27 19:02:18 [emerg] 3988#0: unknown directive "rtmp" in /usr/local/nginx/conf/nginx.conf:17
+2018/11/27 19:09:35 [notice] 7656#0: signal process started
+2018/11/27 19:09:35 [emerg] 3988#0: unknown directive "rtmp" in /usr/local/nginx/conf/nginx.conf:17
+2018/11/27 19:10:36 [notice] 7667#0: signal process started
+2018/11/27 19:10:36 [emerg] 3988#0: unknown directive "rtmp" in /usr/local/nginx/conf/nginx.conf:17
+2018/11/27 19:10:57 [notice] 7676#0: signal process started
+2018/11/27 19:10:57 [emerg] 3988#0: unknown directive "rtmp" in /usr/local/nginx/conf/nginx.conf:17
+2018/11/27 19:11:01 [notice] 7681#0: signal process started
+2018/11/27 19:11:01 [emerg] 3988#0: unknown directive "rtmp" in /usr/local/nginx/conf/nginx.conf:17
+2018/11/28 12:04:10 [notice] 5994#0: signal process started
+2018/11/28 12:05:16 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:17 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:19 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:21 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:23 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:25 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:27 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:29 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:31 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:33 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:35 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:37 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:39 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:41 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:43 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:45 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:47 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:49 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:51 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:53 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:55 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:57 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:05:59 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:01 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:03 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:05 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:07 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:09 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:11 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:13 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:15 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:17 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:19 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:21 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:23 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:25 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:27 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:29 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:31 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:33 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:35 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:37 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:39 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:41 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:43 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:45 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:47 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:49 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:51 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:53 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:55 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:57 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:06:59 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:01 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:03 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:05 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:07 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:09 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:11 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:13 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:15 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:17 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:19 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:21 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:23 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:25 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:27 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:29 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:31 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:33 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:35 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:37 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:39 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:41 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:43 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:45 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:47 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:49 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 12:07:51 [error] 6010#0: *1 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:09 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:09 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:11 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:13 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:15 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:17 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:19 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:21 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:23 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:25 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:27 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:29 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:31 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:33 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:35 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:37 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:39 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:41 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:43 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:45 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:47 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:49 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:51 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:53 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:55 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:57 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:30:59 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:01 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:03 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:05 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:07 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:09 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:11 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:13 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:15 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:17 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:19 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:21 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:23 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:25 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:27 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011
+2018/11/28 14:31:29 [error] 6010#0: *4 hls: mkdir() failed on 'nginx-rtmp-module/hls' (2: No such file or directory), client: 127.0.0.1, server: 0.0.0.0:8011

@@ -31,24 +31,24 @@ int main()
 	}
 
 	NET_DVR_TIME startTime;
-	startTime.dwYear = 2018;
-	startTime.dwMonth = 9;
-	startTime.dwDay = 26;
+	startTime.dwYear = 2019;
+	startTime.dwMonth = 4;
+	startTime.dwDay = 1;
 	startTime.dwHour = 10;
 	startTime.dwMinute = 0;
 	startTime.dwSecond = 0;
 	
 	NET_DVR_TIME stopTime;
-	stopTime.dwYear = 2018;
-	stopTime.dwMonth = 9;
-	stopTime.dwDay = 26;
+	stopTime.dwYear = 2019;
+	stopTime.dwMonth = 4;
+	stopTime.dwDay = 1;
 	stopTime.dwHour =10;
-	stopTime.dwMinute = 3;
-	stopTime.dwSecond =0;
+	stopTime.dwMinute = 0;
+	stopTime.dwSecond =10;
 	LONG chanl = 33;
-	char* fileName = "./test.mp4";
-//#define SAVEFILE_BY_TIME
-#define PLAYBACK_BY_NAME
+	char* fileName = "./test123.flv";
+#define SAVEFILE_BY_TIME
+//#define PLAYBACK_BY_NAME
 
 #ifdef SAVEFILE_BY_TIME
 	ret = HIK_SDK::GetHikSdkInstance().SaveFileByTime(startTime,stopTime,chanl,fileName);
@@ -56,7 +56,9 @@ int main()
 	{
 		printf("SavefileByTime failed,ret = %d\n",ret);
 		return ret;
-	}
+	}else{
+		printf("SaveFileByName Success!");
+		}
 #endif
 
 #ifdef PLAYBACK_BY_TIME

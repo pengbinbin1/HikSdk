@@ -1,0 +1,2 @@
+/usr/bin/ar qc build/lib/libvod_sdk_static.a  CMakeFiles/vod_sdk_static.dir/src/openApiUtil.o CMakeFiles/vod_sdk_static.dir/src/signatureUtil.o CMakeFiles/vod_sdk_static.dir/src/upload.o
+/usr/bin/ranlib build/lib/libvod_sdk_static.a

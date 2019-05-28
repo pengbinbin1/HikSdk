@@ -24,6 +24,9 @@ static const char* HIKSDK_method_names[] = {
   "/HIK_SDK_P.HIKSDK/SaveFileByName",
   "/HIK_SDK_P.HIKSDK/FindFileByTime",
   "/HIK_SDK_P.HIKSDK/GetDVRConfig",
+  "/HIK_SDK_P.HIKSDK/GetPort",
+  "/HIK_SDK_P.HIKSDK/UploadLocalFile",
+  "/HIK_SDK_P.HIKSDK/GetVideoURL",
 };
 
 std::unique_ptr< HIKSDK::Stub> HIKSDK::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -39,22 +42,25 @@ HIKSDK::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   , rpcmethod_SaveFileByName_(HIKSDK_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_FindFileByTime_(HIKSDK_method_names[4], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetDVRConfig_(HIKSDK_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetPort_(HIKSDK_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_UploadLocalFile_(HIKSDK_method_names[7], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetVideoURL_(HIKSDK_method_names[8], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status HIKSDK::Stub::Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::HIK_SDK_P::ErrCode* response) {
+::grpc::Status HIKSDK::Stub::Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::HIK_SDK_P::InitInfo* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_Init_, context, request, response);
 }
 
-void HIKSDK::Stub::experimental_async::Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::ErrCode* response, std::function<void(::grpc::Status)> f) {
+void HIKSDK::Stub::experimental_async::Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::InitInfo* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Init_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>* HIKSDK::Stub::AsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::ErrCode>::Create(channel_.get(), cq, rpcmethod_Init_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::InitInfo>* HIKSDK::Stub::AsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::InitInfo>::Create(channel_.get(), cq, rpcmethod_Init_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>* HIKSDK::Stub::PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::ErrCode>::Create(channel_.get(), cq, rpcmethod_Init_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::InitInfo>* HIKSDK::Stub::PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::InitInfo>::Create(channel_.get(), cq, rpcmethod_Init_, context, request, false);
 }
 
 ::grpc::Status HIKSDK::Stub::Uninit(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty& request, ::HIK_SDK_P::ErrCode* response) {
@@ -137,11 +143,59 @@ void HIKSDK::Stub::experimental_async::GetDVRConfig(::grpc::ClientContext* conte
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::DeviceList>::Create(channel_.get(), cq, rpcmethod_GetDVRConfig_, context, request, false);
 }
 
+::grpc::Status HIKSDK::Stub::GetPort(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::HIK_SDK_P::Port* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetPort_, context, request, response);
+}
+
+void HIKSDK::Stub::experimental_async::GetPort(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::Port* response, std::function<void(::grpc::Status)> f) {
+  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetPort_, context, request, response, std::move(f));
+}
+
+::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::Port>* HIKSDK::Stub::AsyncGetPortRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::Port>::Create(channel_.get(), cq, rpcmethod_GetPort_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::Port>* HIKSDK::Stub::PrepareAsyncGetPortRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::Port>::Create(channel_.get(), cq, rpcmethod_GetPort_, context, request, false);
+}
+
+::grpc::Status HIKSDK::Stub::UploadLocalFile(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::HIK_SDK_P::VideoId* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_UploadLocalFile_, context, request, response);
+}
+
+void HIKSDK::Stub::experimental_async::UploadLocalFile(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam* request, ::HIK_SDK_P::VideoId* response, std::function<void(::grpc::Status)> f) {
+  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_UploadLocalFile_, context, request, response, std::move(f));
+}
+
+::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoId>* HIKSDK::Stub::AsyncUploadLocalFileRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::VideoId>::Create(channel_.get(), cq, rpcmethod_UploadLocalFile_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoId>* HIKSDK::Stub::PrepareAsyncUploadLocalFileRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::VideoId>::Create(channel_.get(), cq, rpcmethod_UploadLocalFile_, context, request, false);
+}
+
+::grpc::Status HIKSDK::Stub::GetVideoURL(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::HIK_SDK_P::VideoURL* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetVideoURL_, context, request, response);
+}
+
+void HIKSDK::Stub::experimental_async::GetVideoURL(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam* request, ::HIK_SDK_P::VideoURL* response, std::function<void(::grpc::Status)> f) {
+  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetVideoURL_, context, request, response, std::move(f));
+}
+
+::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoURL>* HIKSDK::Stub::AsyncGetVideoURLRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::VideoURL>::Create(channel_.get(), cq, rpcmethod_GetVideoURL_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoURL>* HIKSDK::Stub::PrepareAsyncGetVideoURLRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::HIK_SDK_P::VideoURL>::Create(channel_.get(), cq, rpcmethod_GetVideoURL_, context, request, false);
+}
+
 HIKSDK::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       HIKSDK_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< HIKSDK::Service, ::HIK_SDK_P::LoginInfo, ::HIK_SDK_P::ErrCode>(
+      new ::grpc::internal::RpcMethodHandler< HIKSDK::Service, ::HIK_SDK_P::LoginInfo, ::HIK_SDK_P::InitInfo>(
           std::mem_fn(&HIKSDK::Service::Init), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       HIKSDK_method_names[1],
@@ -168,12 +222,27 @@ HIKSDK::Service::Service() {
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< HIKSDK::Service, ::HIK_SDK_P::ConfParam, ::HIK_SDK_P::DeviceList>(
           std::mem_fn(&HIKSDK::Service::GetDVRConfig), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      HIKSDK_method_names[6],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< HIKSDK::Service, ::HIK_SDK_P::ConfParam, ::HIK_SDK_P::Port>(
+          std::mem_fn(&HIKSDK::Service::GetPort), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      HIKSDK_method_names[7],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< HIKSDK::Service, ::HIK_SDK_P::UplodParam, ::HIK_SDK_P::VideoId>(
+          std::mem_fn(&HIKSDK::Service::UploadLocalFile), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      HIKSDK_method_names[8],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< HIKSDK::Service, ::HIK_SDK_P::VideoIdParam, ::HIK_SDK_P::VideoURL>(
+          std::mem_fn(&HIKSDK::Service::GetVideoURL), this)));
 }
 
 HIKSDK::Service::~Service() {
 }
 
-::grpc::Status HIKSDK::Service::Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::ErrCode* response) {
+::grpc::Status HIKSDK::Service::Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::InitInfo* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -209,6 +278,27 @@ HIKSDK::Service::~Service() {
 }
 
 ::grpc::Status HIKSDK::Service::GetDVRConfig(::grpc::ServerContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::DeviceList* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status HIKSDK::Service::GetPort(::grpc::ServerContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::Port* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status HIKSDK::Service::UploadLocalFile(::grpc::ServerContext* context, const ::HIK_SDK_P::UplodParam* request, ::HIK_SDK_P::VideoId* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status HIKSDK::Service::GetVideoURL(::grpc::ServerContext* context, const ::HIK_SDK_P::VideoIdParam* request, ::HIK_SDK_P::VideoURL* response) {
   (void) context;
   (void) request;
   (void) response;

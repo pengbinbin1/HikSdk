@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -g -ggdb -O0 -Wall -fpic -fPIC -D_LARGEFILE64_SOURCE  -shared -Wl,-soname,libvod_sdk.so.3.0.0 -o build/lib/libvod_sdk.so.3.0.0 CMakeFiles/vod_sdk.dir/src/openApiUtil.o CMakeFiles/vod_sdk.dir/src/signatureUtil.o CMakeFiles/vod_sdk.dir/src/upload.o 

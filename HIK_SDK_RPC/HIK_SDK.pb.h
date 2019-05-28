@@ -38,7 +38,7 @@ namespace protobuf_HIK_5fSDK_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[11];
+  static const ::google::protobuf::internal::ParseTable schema[18];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -46,6 +46,9 @@ struct TableStruct {
 void AddDescriptors();
 }  // namespace protobuf_HIK_5fSDK_2eproto
 namespace HIK_SDK_P {
+class Access;
+class AccessDefaultTypeInternal;
+extern AccessDefaultTypeInternal _Access_default_instance_;
 class ConfParam;
 class ConfParamDefaultTypeInternal;
 extern ConfParamDefaultTypeInternal _ConfParam_default_instance_;
@@ -67,9 +70,15 @@ extern FileDataDefaultTypeInternal _FileData_default_instance_;
 class FindFileParam;
 class FindFileParamDefaultTypeInternal;
 extern FindFileParamDefaultTypeInternal _FindFileParam_default_instance_;
+class InitInfo;
+class InitInfoDefaultTypeInternal;
+extern InitInfoDefaultTypeInternal _InitInfo_default_instance_;
 class LoginInfo;
 class LoginInfoDefaultTypeInternal;
 extern LoginInfoDefaultTypeInternal _LoginInfo_default_instance_;
+class Port;
+class PortDefaultTypeInternal;
+extern PortDefaultTypeInternal _Port_default_instance_;
 class SaveFileParam;
 class SaveFileParamDefaultTypeInternal;
 extern SaveFileParamDefaultTypeInternal _SaveFileParam_default_instance_;
@@ -79,9 +88,22 @@ extern SaveFileParam1DefaultTypeInternal _SaveFileParam1_default_instance_;
 class Time;
 class TimeDefaultTypeInternal;
 extern TimeDefaultTypeInternal _Time_default_instance_;
+class UplodParam;
+class UplodParamDefaultTypeInternal;
+extern UplodParamDefaultTypeInternal _UplodParam_default_instance_;
+class VideoId;
+class VideoIdDefaultTypeInternal;
+extern VideoIdDefaultTypeInternal _VideoId_default_instance_;
+class VideoIdParam;
+class VideoIdParamDefaultTypeInternal;
+extern VideoIdParamDefaultTypeInternal _VideoIdParam_default_instance_;
+class VideoURL;
+class VideoURLDefaultTypeInternal;
+extern VideoURLDefaultTypeInternal _VideoURL_default_instance_;
 }  // namespace HIK_SDK_P
 namespace google {
 namespace protobuf {
+template<> ::HIK_SDK_P::Access* Arena::CreateMaybeMessage<::HIK_SDK_P::Access>(Arena*);
 template<> ::HIK_SDK_P::ConfParam* Arena::CreateMaybeMessage<::HIK_SDK_P::ConfParam>(Arena*);
 template<> ::HIK_SDK_P::DeviceInfo* Arena::CreateMaybeMessage<::HIK_SDK_P::DeviceInfo>(Arena*);
 template<> ::HIK_SDK_P::DeviceList* Arena::CreateMaybeMessage<::HIK_SDK_P::DeviceList>(Arena*);
@@ -89,10 +111,16 @@ template<> ::HIK_SDK_P::Empty* Arena::CreateMaybeMessage<::HIK_SDK_P::Empty>(Are
 template<> ::HIK_SDK_P::ErrCode* Arena::CreateMaybeMessage<::HIK_SDK_P::ErrCode>(Arena*);
 template<> ::HIK_SDK_P::FileData* Arena::CreateMaybeMessage<::HIK_SDK_P::FileData>(Arena*);
 template<> ::HIK_SDK_P::FindFileParam* Arena::CreateMaybeMessage<::HIK_SDK_P::FindFileParam>(Arena*);
+template<> ::HIK_SDK_P::InitInfo* Arena::CreateMaybeMessage<::HIK_SDK_P::InitInfo>(Arena*);
 template<> ::HIK_SDK_P::LoginInfo* Arena::CreateMaybeMessage<::HIK_SDK_P::LoginInfo>(Arena*);
+template<> ::HIK_SDK_P::Port* Arena::CreateMaybeMessage<::HIK_SDK_P::Port>(Arena*);
 template<> ::HIK_SDK_P::SaveFileParam* Arena::CreateMaybeMessage<::HIK_SDK_P::SaveFileParam>(Arena*);
 template<> ::HIK_SDK_P::SaveFileParam1* Arena::CreateMaybeMessage<::HIK_SDK_P::SaveFileParam1>(Arena*);
 template<> ::HIK_SDK_P::Time* Arena::CreateMaybeMessage<::HIK_SDK_P::Time>(Arena*);
+template<> ::HIK_SDK_P::UplodParam* Arena::CreateMaybeMessage<::HIK_SDK_P::UplodParam>(Arena*);
+template<> ::HIK_SDK_P::VideoId* Arena::CreateMaybeMessage<::HIK_SDK_P::VideoId>(Arena*);
+template<> ::HIK_SDK_P::VideoIdParam* Arena::CreateMaybeMessage<::HIK_SDK_P::VideoIdParam>(Arena*);
+template<> ::HIK_SDK_P::VideoURL* Arena::CreateMaybeMessage<::HIK_SDK_P::VideoURL>(Arena*);
 }  // namespace protobuf
 }  // namespace google
 namespace HIK_SDK_P {
@@ -254,6 +282,262 @@ class LoginInfo : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
+class InitInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:HIK_SDK_P.InitInfo) */ {
+ public:
+  InitInfo();
+  virtual ~InitInfo();
+
+  InitInfo(const InitInfo& from);
+
+  inline InitInfo& operator=(const InitInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  InitInfo(InitInfo&& from) noexcept
+    : InitInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline InitInfo& operator=(InitInfo&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const InitInfo& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const InitInfo* internal_default_instance() {
+    return reinterpret_cast<const InitInfo*>(
+               &_InitInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  void Swap(InitInfo* other);
+  friend void swap(InitInfo& a, InitInfo& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline InitInfo* New() const final {
+    return CreateMaybeMessage<InitInfo>(NULL);
+  }
+
+  InitInfo* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<InitInfo>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const InitInfo& from);
+  void MergeFrom(const InitInfo& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(InitInfo* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string deviceSN = 3;
+  void clear_devicesn();
+  static const int kDeviceSNFieldNumber = 3;
+  const ::std::string& devicesn() const;
+  void set_devicesn(const ::std::string& value);
+  #if LANG_CXX11
+  void set_devicesn(::std::string&& value);
+  #endif
+  void set_devicesn(const char* value);
+  void set_devicesn(const char* value, size_t size);
+  ::std::string* mutable_devicesn();
+  ::std::string* release_devicesn();
+  void set_allocated_devicesn(::std::string* devicesn);
+
+  // int32 err = 1;
+  void clear_err();
+  static const int kErrFieldNumber = 1;
+  ::google::protobuf::int32 err() const;
+  void set_err(::google::protobuf::int32 value);
+
+  // int32 deviceType = 2;
+  void clear_devicetype();
+  static const int kDeviceTypeFieldNumber = 2;
+  ::google::protobuf::int32 devicetype() const;
+  void set_devicetype(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:HIK_SDK_P.InitInfo)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr devicesn_;
+  ::google::protobuf::int32 err_;
+  ::google::protobuf::int32 devicetype_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_HIK_5fSDK_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Port : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:HIK_SDK_P.Port) */ {
+ public:
+  Port();
+  virtual ~Port();
+
+  Port(const Port& from);
+
+  inline Port& operator=(const Port& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Port(Port&& from) noexcept
+    : Port() {
+    *this = ::std::move(from);
+  }
+
+  inline Port& operator=(Port&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Port& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Port* internal_default_instance() {
+    return reinterpret_cast<const Port*>(
+               &_Port_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  void Swap(Port* other);
+  friend void swap(Port& a, Port& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Port* New() const final {
+    return CreateMaybeMessage<Port>(NULL);
+  }
+
+  Port* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Port>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Port& from);
+  void MergeFrom(const Port& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Port* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 err = 1;
+  void clear_err();
+  static const int kErrFieldNumber = 1;
+  ::google::protobuf::int32 err() const;
+  void set_err(::google::protobuf::int32 value);
+
+  // int32 rtsp = 2;
+  void clear_rtsp();
+  static const int kRtspFieldNumber = 2;
+  ::google::protobuf::int32 rtsp() const;
+  void set_rtsp(::google::protobuf::int32 value);
+
+  // int32 http = 3;
+  void clear_http();
+  static const int kHttpFieldNumber = 3;
+  ::google::protobuf::int32 http() const;
+  void set_http(::google::protobuf::int32 value);
+
+  // int32 https = 4;
+  void clear_https();
+  static const int kHttpsFieldNumber = 4;
+  ::google::protobuf::int32 https() const;
+  void set_https(::google::protobuf::int32 value);
+
+  // int32 cmd = 5;
+  void clear_cmd();
+  static const int kCmdFieldNumber = 5;
+  ::google::protobuf::int32 cmd() const;
+  void set_cmd(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:HIK_SDK_P.Port)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 err_;
+  ::google::protobuf::int32 rtsp_;
+  ::google::protobuf::int32 http_;
+  ::google::protobuf::int32 https_;
+  ::google::protobuf::int32 cmd_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_HIK_5fSDK_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class ConfParam : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:HIK_SDK_P.ConfParam) */ {
  public:
   ConfParam();
@@ -289,7 +573,7 @@ class ConfParam : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_ConfParam_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    3;
 
   void Swap(ConfParam* other);
   friend void swap(ConfParam& a, ConfParam& b) {
@@ -399,7 +683,7 @@ class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_DeviceInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    4;
 
   void Swap(DeviceInfo* other);
   friend void swap(DeviceInfo& a, DeviceInfo& b) {
@@ -554,7 +838,7 @@ class DeviceList : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_DeviceList_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    5;
 
   void Swap(DeviceList* other);
   friend void swap(DeviceList& a, DeviceList& b) {
@@ -606,10 +890,10 @@ class DeviceList : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // accessors -------------------------------------------------------
 
-  // repeated .HIK_SDK_P.DeviceInfo DeviceLists = 2;
+  // repeated .HIK_SDK_P.DeviceInfo DeviceLists = 4;
   int devicelists_size() const;
   void clear_devicelists();
-  static const int kDeviceListsFieldNumber = 2;
+  static const int kDeviceListsFieldNumber = 4;
   ::HIK_SDK_P::DeviceInfo* mutable_devicelists(int index);
   ::google::protobuf::RepeatedPtrField< ::HIK_SDK_P::DeviceInfo >*
       mutable_devicelists();
@@ -670,7 +954,7 @@ class Empty : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
                &_Empty_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    6;
 
   void Swap(Empty* other);
   friend void swap(Empty& a, Empty& b) {
@@ -766,7 +1050,7 @@ class Time : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
                &_Time_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    7;
 
   void Swap(Time* other);
   friend void swap(Time& a, Time& b) {
@@ -904,7 +1188,7 @@ class SaveFileParam : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_SaveFileParam_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    8;
 
   void Swap(SaveFileParam* other);
   friend void swap(SaveFileParam& a, SaveFileParam& b) {
@@ -1048,7 +1332,7 @@ class SaveFileParam1 : public ::google::protobuf::Message /* @@protoc_insertion_
                &_SaveFileParam1_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    9;
 
   void Swap(SaveFileParam1* other);
   friend void swap(SaveFileParam1& a, SaveFileParam1& b) {
@@ -1174,7 +1458,7 @@ class FileData : public ::google::protobuf::Message /* @@protoc_insertion_point(
                &_FileData_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    10;
 
   void Swap(FileData* other);
   friend void swap(FileData& a, FileData& b) {
@@ -1325,7 +1609,7 @@ class FindFileParam : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_FindFileParam_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    11;
 
   void Swap(FindFileParam* other);
   friend void swap(FindFileParam& a, FindFileParam& b) {
@@ -1419,6 +1703,646 @@ class FindFileParam : public ::google::protobuf::Message /* @@protoc_insertion_p
 };
 // -------------------------------------------------------------------
 
+class Access : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:HIK_SDK_P.Access) */ {
+ public:
+  Access();
+  virtual ~Access();
+
+  Access(const Access& from);
+
+  inline Access& operator=(const Access& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Access(Access&& from) noexcept
+    : Access() {
+    *this = ::std::move(from);
+  }
+
+  inline Access& operator=(Access&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Access& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Access* internal_default_instance() {
+    return reinterpret_cast<const Access*>(
+               &_Access_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  void Swap(Access* other);
+  friend void swap(Access& a, Access& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Access* New() const final {
+    return CreateMaybeMessage<Access>(NULL);
+  }
+
+  Access* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Access>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Access& from);
+  void MergeFrom(const Access& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Access* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string accesskey = 1;
+  void clear_accesskey();
+  static const int kAccesskeyFieldNumber = 1;
+  const ::std::string& accesskey() const;
+  void set_accesskey(const ::std::string& value);
+  #if LANG_CXX11
+  void set_accesskey(::std::string&& value);
+  #endif
+  void set_accesskey(const char* value);
+  void set_accesskey(const char* value, size_t size);
+  ::std::string* mutable_accesskey();
+  ::std::string* release_accesskey();
+  void set_allocated_accesskey(::std::string* accesskey);
+
+  // string accesskeySecret = 2;
+  void clear_accesskeysecret();
+  static const int kAccesskeySecretFieldNumber = 2;
+  const ::std::string& accesskeysecret() const;
+  void set_accesskeysecret(const ::std::string& value);
+  #if LANG_CXX11
+  void set_accesskeysecret(::std::string&& value);
+  #endif
+  void set_accesskeysecret(const char* value);
+  void set_accesskeysecret(const char* value, size_t size);
+  ::std::string* mutable_accesskeysecret();
+  ::std::string* release_accesskeysecret();
+  void set_allocated_accesskeysecret(::std::string* accesskeysecret);
+
+  // string regionId = 3;
+  void clear_regionid();
+  static const int kRegionIdFieldNumber = 3;
+  const ::std::string& regionid() const;
+  void set_regionid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_regionid(::std::string&& value);
+  #endif
+  void set_regionid(const char* value);
+  void set_regionid(const char* value, size_t size);
+  ::std::string* mutable_regionid();
+  ::std::string* release_regionid();
+  void set_allocated_regionid(::std::string* regionid);
+
+  // @@protoc_insertion_point(class_scope:HIK_SDK_P.Access)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr accesskey_;
+  ::google::protobuf::internal::ArenaStringPtr accesskeysecret_;
+  ::google::protobuf::internal::ArenaStringPtr regionid_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_HIK_5fSDK_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class UplodParam : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:HIK_SDK_P.UplodParam) */ {
+ public:
+  UplodParam();
+  virtual ~UplodParam();
+
+  UplodParam(const UplodParam& from);
+
+  inline UplodParam& operator=(const UplodParam& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  UplodParam(UplodParam&& from) noexcept
+    : UplodParam() {
+    *this = ::std::move(from);
+  }
+
+  inline UplodParam& operator=(UplodParam&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const UplodParam& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const UplodParam* internal_default_instance() {
+    return reinterpret_cast<const UplodParam*>(
+               &_UplodParam_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    13;
+
+  void Swap(UplodParam* other);
+  friend void swap(UplodParam& a, UplodParam& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline UplodParam* New() const final {
+    return CreateMaybeMessage<UplodParam>(NULL);
+  }
+
+  UplodParam* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<UplodParam>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const UplodParam& from);
+  void MergeFrom(const UplodParam& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(UplodParam* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string filename = 2;
+  void clear_filename();
+  static const int kFilenameFieldNumber = 2;
+  const ::std::string& filename() const;
+  void set_filename(const ::std::string& value);
+  #if LANG_CXX11
+  void set_filename(::std::string&& value);
+  #endif
+  void set_filename(const char* value);
+  void set_filename(const char* value, size_t size);
+  ::std::string* mutable_filename();
+  ::std::string* release_filename();
+  void set_allocated_filename(::std::string* filename);
+
+  // string videoTitle = 3;
+  void clear_videotitle();
+  static const int kVideoTitleFieldNumber = 3;
+  const ::std::string& videotitle() const;
+  void set_videotitle(const ::std::string& value);
+  #if LANG_CXX11
+  void set_videotitle(::std::string&& value);
+  #endif
+  void set_videotitle(const char* value);
+  void set_videotitle(const char* value, size_t size);
+  ::std::string* mutable_videotitle();
+  ::std::string* release_videotitle();
+  void set_allocated_videotitle(::std::string* videotitle);
+
+  // .HIK_SDK_P.Access access = 1;
+  bool has_access() const;
+  void clear_access();
+  static const int kAccessFieldNumber = 1;
+  private:
+  const ::HIK_SDK_P::Access& _internal_access() const;
+  public:
+  const ::HIK_SDK_P::Access& access() const;
+  ::HIK_SDK_P::Access* release_access();
+  ::HIK_SDK_P::Access* mutable_access();
+  void set_allocated_access(::HIK_SDK_P::Access* access);
+
+  // @@protoc_insertion_point(class_scope:HIK_SDK_P.UplodParam)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr filename_;
+  ::google::protobuf::internal::ArenaStringPtr videotitle_;
+  ::HIK_SDK_P::Access* access_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_HIK_5fSDK_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class VideoId : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:HIK_SDK_P.VideoId) */ {
+ public:
+  VideoId();
+  virtual ~VideoId();
+
+  VideoId(const VideoId& from);
+
+  inline VideoId& operator=(const VideoId& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  VideoId(VideoId&& from) noexcept
+    : VideoId() {
+    *this = ::std::move(from);
+  }
+
+  inline VideoId& operator=(VideoId&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const VideoId& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const VideoId* internal_default_instance() {
+    return reinterpret_cast<const VideoId*>(
+               &_VideoId_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    14;
+
+  void Swap(VideoId* other);
+  friend void swap(VideoId& a, VideoId& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline VideoId* New() const final {
+    return CreateMaybeMessage<VideoId>(NULL);
+  }
+
+  VideoId* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<VideoId>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const VideoId& from);
+  void MergeFrom(const VideoId& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(VideoId* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string videoId = 2;
+  void clear_videoid();
+  static const int kVideoIdFieldNumber = 2;
+  const ::std::string& videoid() const;
+  void set_videoid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_videoid(::std::string&& value);
+  #endif
+  void set_videoid(const char* value);
+  void set_videoid(const char* value, size_t size);
+  ::std::string* mutable_videoid();
+  ::std::string* release_videoid();
+  void set_allocated_videoid(::std::string* videoid);
+
+  // int32 err = 1;
+  void clear_err();
+  static const int kErrFieldNumber = 1;
+  ::google::protobuf::int32 err() const;
+  void set_err(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:HIK_SDK_P.VideoId)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr videoid_;
+  ::google::protobuf::int32 err_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_HIK_5fSDK_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class VideoIdParam : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:HIK_SDK_P.VideoIdParam) */ {
+ public:
+  VideoIdParam();
+  virtual ~VideoIdParam();
+
+  VideoIdParam(const VideoIdParam& from);
+
+  inline VideoIdParam& operator=(const VideoIdParam& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  VideoIdParam(VideoIdParam&& from) noexcept
+    : VideoIdParam() {
+    *this = ::std::move(from);
+  }
+
+  inline VideoIdParam& operator=(VideoIdParam&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const VideoIdParam& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const VideoIdParam* internal_default_instance() {
+    return reinterpret_cast<const VideoIdParam*>(
+               &_VideoIdParam_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    15;
+
+  void Swap(VideoIdParam* other);
+  friend void swap(VideoIdParam& a, VideoIdParam& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline VideoIdParam* New() const final {
+    return CreateMaybeMessage<VideoIdParam>(NULL);
+  }
+
+  VideoIdParam* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<VideoIdParam>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const VideoIdParam& from);
+  void MergeFrom(const VideoIdParam& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(VideoIdParam* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string videoId = 2;
+  void clear_videoid();
+  static const int kVideoIdFieldNumber = 2;
+  const ::std::string& videoid() const;
+  void set_videoid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_videoid(::std::string&& value);
+  #endif
+  void set_videoid(const char* value);
+  void set_videoid(const char* value, size_t size);
+  ::std::string* mutable_videoid();
+  ::std::string* release_videoid();
+  void set_allocated_videoid(::std::string* videoid);
+
+  // .HIK_SDK_P.Access access = 1;
+  bool has_access() const;
+  void clear_access();
+  static const int kAccessFieldNumber = 1;
+  private:
+  const ::HIK_SDK_P::Access& _internal_access() const;
+  public:
+  const ::HIK_SDK_P::Access& access() const;
+  ::HIK_SDK_P::Access* release_access();
+  ::HIK_SDK_P::Access* mutable_access();
+  void set_allocated_access(::HIK_SDK_P::Access* access);
+
+  // @@protoc_insertion_point(class_scope:HIK_SDK_P.VideoIdParam)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr videoid_;
+  ::HIK_SDK_P::Access* access_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_HIK_5fSDK_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class VideoURL : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:HIK_SDK_P.VideoURL) */ {
+ public:
+  VideoURL();
+  virtual ~VideoURL();
+
+  VideoURL(const VideoURL& from);
+
+  inline VideoURL& operator=(const VideoURL& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  VideoURL(VideoURL&& from) noexcept
+    : VideoURL() {
+    *this = ::std::move(from);
+  }
+
+  inline VideoURL& operator=(VideoURL&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const VideoURL& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const VideoURL* internal_default_instance() {
+    return reinterpret_cast<const VideoURL*>(
+               &_VideoURL_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  void Swap(VideoURL* other);
+  friend void swap(VideoURL& a, VideoURL& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline VideoURL* New() const final {
+    return CreateMaybeMessage<VideoURL>(NULL);
+  }
+
+  VideoURL* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<VideoURL>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const VideoURL& from);
+  void MergeFrom(const VideoURL& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(VideoURL* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string URL = 2;
+  void clear_url();
+  static const int kURLFieldNumber = 2;
+  const ::std::string& url() const;
+  void set_url(const ::std::string& value);
+  #if LANG_CXX11
+  void set_url(::std::string&& value);
+  #endif
+  void set_url(const char* value);
+  void set_url(const char* value, size_t size);
+  ::std::string* mutable_url();
+  ::std::string* release_url();
+  void set_allocated_url(::std::string* url);
+
+  // int32 err = 1;
+  void clear_err();
+  static const int kErrFieldNumber = 1;
+  ::google::protobuf::int32 err() const;
+  void set_err(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:HIK_SDK_P.VideoURL)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr url_;
+  ::google::protobuf::int32 err_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_HIK_5fSDK_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class ErrCode : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:HIK_SDK_P.ErrCode) */ {
  public:
   ErrCode();
@@ -1454,7 +2378,7 @@ class ErrCode : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_ErrCode_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    17;
 
   void Swap(ErrCode* other);
   friend void swap(ErrCode& a, ErrCode& b) {
@@ -1720,6 +2644,165 @@ inline void LoginInfo::set_useasynlogin(bool value) {
 
 // -------------------------------------------------------------------
 
+// InitInfo
+
+// int32 err = 1;
+inline void InitInfo::clear_err() {
+  err_ = 0;
+}
+inline ::google::protobuf::int32 InitInfo::err() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.InitInfo.err)
+  return err_;
+}
+inline void InitInfo::set_err(::google::protobuf::int32 value) {
+  
+  err_ = value;
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.InitInfo.err)
+}
+
+// int32 deviceType = 2;
+inline void InitInfo::clear_devicetype() {
+  devicetype_ = 0;
+}
+inline ::google::protobuf::int32 InitInfo::devicetype() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.InitInfo.deviceType)
+  return devicetype_;
+}
+inline void InitInfo::set_devicetype(::google::protobuf::int32 value) {
+  
+  devicetype_ = value;
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.InitInfo.deviceType)
+}
+
+// string deviceSN = 3;
+inline void InitInfo::clear_devicesn() {
+  devicesn_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& InitInfo::devicesn() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.InitInfo.deviceSN)
+  return devicesn_.GetNoArena();
+}
+inline void InitInfo::set_devicesn(const ::std::string& value) {
+  
+  devicesn_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.InitInfo.deviceSN)
+}
+#if LANG_CXX11
+inline void InitInfo::set_devicesn(::std::string&& value) {
+  
+  devicesn_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:HIK_SDK_P.InitInfo.deviceSN)
+}
+#endif
+inline void InitInfo::set_devicesn(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  devicesn_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:HIK_SDK_P.InitInfo.deviceSN)
+}
+inline void InitInfo::set_devicesn(const char* value, size_t size) {
+  
+  devicesn_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:HIK_SDK_P.InitInfo.deviceSN)
+}
+inline ::std::string* InitInfo::mutable_devicesn() {
+  
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.InitInfo.deviceSN)
+  return devicesn_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* InitInfo::release_devicesn() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.InitInfo.deviceSN)
+  
+  return devicesn_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void InitInfo::set_allocated_devicesn(::std::string* devicesn) {
+  if (devicesn != NULL) {
+    
+  } else {
+    
+  }
+  devicesn_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), devicesn);
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.InitInfo.deviceSN)
+}
+
+// -------------------------------------------------------------------
+
+// Port
+
+// int32 err = 1;
+inline void Port::clear_err() {
+  err_ = 0;
+}
+inline ::google::protobuf::int32 Port::err() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.Port.err)
+  return err_;
+}
+inline void Port::set_err(::google::protobuf::int32 value) {
+  
+  err_ = value;
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.Port.err)
+}
+
+// int32 rtsp = 2;
+inline void Port::clear_rtsp() {
+  rtsp_ = 0;
+}
+inline ::google::protobuf::int32 Port::rtsp() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.Port.rtsp)
+  return rtsp_;
+}
+inline void Port::set_rtsp(::google::protobuf::int32 value) {
+  
+  rtsp_ = value;
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.Port.rtsp)
+}
+
+// int32 http = 3;
+inline void Port::clear_http() {
+  http_ = 0;
+}
+inline ::google::protobuf::int32 Port::http() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.Port.http)
+  return http_;
+}
+inline void Port::set_http(::google::protobuf::int32 value) {
+  
+  http_ = value;
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.Port.http)
+}
+
+// int32 https = 4;
+inline void Port::clear_https() {
+  https_ = 0;
+}
+inline ::google::protobuf::int32 Port::https() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.Port.https)
+  return https_;
+}
+inline void Port::set_https(::google::protobuf::int32 value) {
+  
+  https_ = value;
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.Port.https)
+}
+
+// int32 cmd = 5;
+inline void Port::clear_cmd() {
+  cmd_ = 0;
+}
+inline ::google::protobuf::int32 Port::cmd() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.Port.cmd)
+  return cmd_;
+}
+inline void Port::set_cmd(::google::protobuf::int32 value) {
+  
+  cmd_ = value;
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.Port.cmd)
+}
+
+// -------------------------------------------------------------------
+
 // ConfParam
 
 // int32 command = 1;
@@ -1959,7 +3042,7 @@ inline void DeviceList::set_err(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:HIK_SDK_P.DeviceList.err)
 }
 
-// repeated .HIK_SDK_P.DeviceInfo DeviceLists = 2;
+// repeated .HIK_SDK_P.DeviceInfo DeviceLists = 4;
 inline int DeviceList::devicelists_size() const {
   return devicelists_.size();
 }
@@ -2691,6 +3774,586 @@ inline void FindFileParam::set_channel(::google::protobuf::uint64 value) {
 
 // -------------------------------------------------------------------
 
+// Access
+
+// string accesskey = 1;
+inline void Access::clear_accesskey() {
+  accesskey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Access::accesskey() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.Access.accesskey)
+  return accesskey_.GetNoArena();
+}
+inline void Access::set_accesskey(const ::std::string& value) {
+  
+  accesskey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.Access.accesskey)
+}
+#if LANG_CXX11
+inline void Access::set_accesskey(::std::string&& value) {
+  
+  accesskey_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:HIK_SDK_P.Access.accesskey)
+}
+#endif
+inline void Access::set_accesskey(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  accesskey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:HIK_SDK_P.Access.accesskey)
+}
+inline void Access::set_accesskey(const char* value, size_t size) {
+  
+  accesskey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:HIK_SDK_P.Access.accesskey)
+}
+inline ::std::string* Access::mutable_accesskey() {
+  
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.Access.accesskey)
+  return accesskey_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Access::release_accesskey() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.Access.accesskey)
+  
+  return accesskey_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Access::set_allocated_accesskey(::std::string* accesskey) {
+  if (accesskey != NULL) {
+    
+  } else {
+    
+  }
+  accesskey_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), accesskey);
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.Access.accesskey)
+}
+
+// string accesskeySecret = 2;
+inline void Access::clear_accesskeysecret() {
+  accesskeysecret_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Access::accesskeysecret() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.Access.accesskeySecret)
+  return accesskeysecret_.GetNoArena();
+}
+inline void Access::set_accesskeysecret(const ::std::string& value) {
+  
+  accesskeysecret_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.Access.accesskeySecret)
+}
+#if LANG_CXX11
+inline void Access::set_accesskeysecret(::std::string&& value) {
+  
+  accesskeysecret_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:HIK_SDK_P.Access.accesskeySecret)
+}
+#endif
+inline void Access::set_accesskeysecret(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  accesskeysecret_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:HIK_SDK_P.Access.accesskeySecret)
+}
+inline void Access::set_accesskeysecret(const char* value, size_t size) {
+  
+  accesskeysecret_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:HIK_SDK_P.Access.accesskeySecret)
+}
+inline ::std::string* Access::mutable_accesskeysecret() {
+  
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.Access.accesskeySecret)
+  return accesskeysecret_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Access::release_accesskeysecret() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.Access.accesskeySecret)
+  
+  return accesskeysecret_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Access::set_allocated_accesskeysecret(::std::string* accesskeysecret) {
+  if (accesskeysecret != NULL) {
+    
+  } else {
+    
+  }
+  accesskeysecret_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), accesskeysecret);
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.Access.accesskeySecret)
+}
+
+// string regionId = 3;
+inline void Access::clear_regionid() {
+  regionid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Access::regionid() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.Access.regionId)
+  return regionid_.GetNoArena();
+}
+inline void Access::set_regionid(const ::std::string& value) {
+  
+  regionid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.Access.regionId)
+}
+#if LANG_CXX11
+inline void Access::set_regionid(::std::string&& value) {
+  
+  regionid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:HIK_SDK_P.Access.regionId)
+}
+#endif
+inline void Access::set_regionid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  regionid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:HIK_SDK_P.Access.regionId)
+}
+inline void Access::set_regionid(const char* value, size_t size) {
+  
+  regionid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:HIK_SDK_P.Access.regionId)
+}
+inline ::std::string* Access::mutable_regionid() {
+  
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.Access.regionId)
+  return regionid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Access::release_regionid() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.Access.regionId)
+  
+  return regionid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Access::set_allocated_regionid(::std::string* regionid) {
+  if (regionid != NULL) {
+    
+  } else {
+    
+  }
+  regionid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), regionid);
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.Access.regionId)
+}
+
+// -------------------------------------------------------------------
+
+// UplodParam
+
+// .HIK_SDK_P.Access access = 1;
+inline bool UplodParam::has_access() const {
+  return this != internal_default_instance() && access_ != NULL;
+}
+inline void UplodParam::clear_access() {
+  if (GetArenaNoVirtual() == NULL && access_ != NULL) {
+    delete access_;
+  }
+  access_ = NULL;
+}
+inline const ::HIK_SDK_P::Access& UplodParam::_internal_access() const {
+  return *access_;
+}
+inline const ::HIK_SDK_P::Access& UplodParam::access() const {
+  const ::HIK_SDK_P::Access* p = access_;
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.UplodParam.access)
+  return p != NULL ? *p : *reinterpret_cast<const ::HIK_SDK_P::Access*>(
+      &::HIK_SDK_P::_Access_default_instance_);
+}
+inline ::HIK_SDK_P::Access* UplodParam::release_access() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.UplodParam.access)
+  
+  ::HIK_SDK_P::Access* temp = access_;
+  access_ = NULL;
+  return temp;
+}
+inline ::HIK_SDK_P::Access* UplodParam::mutable_access() {
+  
+  if (access_ == NULL) {
+    auto* p = CreateMaybeMessage<::HIK_SDK_P::Access>(GetArenaNoVirtual());
+    access_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.UplodParam.access)
+  return access_;
+}
+inline void UplodParam::set_allocated_access(::HIK_SDK_P::Access* access) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete access_;
+  }
+  if (access) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      access = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, access, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  access_ = access;
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.UplodParam.access)
+}
+
+// string filename = 2;
+inline void UplodParam::clear_filename() {
+  filename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& UplodParam::filename() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.UplodParam.filename)
+  return filename_.GetNoArena();
+}
+inline void UplodParam::set_filename(const ::std::string& value) {
+  
+  filename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.UplodParam.filename)
+}
+#if LANG_CXX11
+inline void UplodParam::set_filename(::std::string&& value) {
+  
+  filename_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:HIK_SDK_P.UplodParam.filename)
+}
+#endif
+inline void UplodParam::set_filename(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  filename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:HIK_SDK_P.UplodParam.filename)
+}
+inline void UplodParam::set_filename(const char* value, size_t size) {
+  
+  filename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:HIK_SDK_P.UplodParam.filename)
+}
+inline ::std::string* UplodParam::mutable_filename() {
+  
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.UplodParam.filename)
+  return filename_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* UplodParam::release_filename() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.UplodParam.filename)
+  
+  return filename_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void UplodParam::set_allocated_filename(::std::string* filename) {
+  if (filename != NULL) {
+    
+  } else {
+    
+  }
+  filename_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), filename);
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.UplodParam.filename)
+}
+
+// string videoTitle = 3;
+inline void UplodParam::clear_videotitle() {
+  videotitle_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& UplodParam::videotitle() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.UplodParam.videoTitle)
+  return videotitle_.GetNoArena();
+}
+inline void UplodParam::set_videotitle(const ::std::string& value) {
+  
+  videotitle_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.UplodParam.videoTitle)
+}
+#if LANG_CXX11
+inline void UplodParam::set_videotitle(::std::string&& value) {
+  
+  videotitle_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:HIK_SDK_P.UplodParam.videoTitle)
+}
+#endif
+inline void UplodParam::set_videotitle(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  videotitle_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:HIK_SDK_P.UplodParam.videoTitle)
+}
+inline void UplodParam::set_videotitle(const char* value, size_t size) {
+  
+  videotitle_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:HIK_SDK_P.UplodParam.videoTitle)
+}
+inline ::std::string* UplodParam::mutable_videotitle() {
+  
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.UplodParam.videoTitle)
+  return videotitle_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* UplodParam::release_videotitle() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.UplodParam.videoTitle)
+  
+  return videotitle_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void UplodParam::set_allocated_videotitle(::std::string* videotitle) {
+  if (videotitle != NULL) {
+    
+  } else {
+    
+  }
+  videotitle_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), videotitle);
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.UplodParam.videoTitle)
+}
+
+// -------------------------------------------------------------------
+
+// VideoId
+
+// int32 err = 1;
+inline void VideoId::clear_err() {
+  err_ = 0;
+}
+inline ::google::protobuf::int32 VideoId::err() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.VideoId.err)
+  return err_;
+}
+inline void VideoId::set_err(::google::protobuf::int32 value) {
+  
+  err_ = value;
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.VideoId.err)
+}
+
+// string videoId = 2;
+inline void VideoId::clear_videoid() {
+  videoid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& VideoId::videoid() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.VideoId.videoId)
+  return videoid_.GetNoArena();
+}
+inline void VideoId::set_videoid(const ::std::string& value) {
+  
+  videoid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.VideoId.videoId)
+}
+#if LANG_CXX11
+inline void VideoId::set_videoid(::std::string&& value) {
+  
+  videoid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:HIK_SDK_P.VideoId.videoId)
+}
+#endif
+inline void VideoId::set_videoid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  videoid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:HIK_SDK_P.VideoId.videoId)
+}
+inline void VideoId::set_videoid(const char* value, size_t size) {
+  
+  videoid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:HIK_SDK_P.VideoId.videoId)
+}
+inline ::std::string* VideoId::mutable_videoid() {
+  
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.VideoId.videoId)
+  return videoid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* VideoId::release_videoid() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.VideoId.videoId)
+  
+  return videoid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void VideoId::set_allocated_videoid(::std::string* videoid) {
+  if (videoid != NULL) {
+    
+  } else {
+    
+  }
+  videoid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), videoid);
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.VideoId.videoId)
+}
+
+// -------------------------------------------------------------------
+
+// VideoIdParam
+
+// .HIK_SDK_P.Access access = 1;
+inline bool VideoIdParam::has_access() const {
+  return this != internal_default_instance() && access_ != NULL;
+}
+inline void VideoIdParam::clear_access() {
+  if (GetArenaNoVirtual() == NULL && access_ != NULL) {
+    delete access_;
+  }
+  access_ = NULL;
+}
+inline const ::HIK_SDK_P::Access& VideoIdParam::_internal_access() const {
+  return *access_;
+}
+inline const ::HIK_SDK_P::Access& VideoIdParam::access() const {
+  const ::HIK_SDK_P::Access* p = access_;
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.VideoIdParam.access)
+  return p != NULL ? *p : *reinterpret_cast<const ::HIK_SDK_P::Access*>(
+      &::HIK_SDK_P::_Access_default_instance_);
+}
+inline ::HIK_SDK_P::Access* VideoIdParam::release_access() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.VideoIdParam.access)
+  
+  ::HIK_SDK_P::Access* temp = access_;
+  access_ = NULL;
+  return temp;
+}
+inline ::HIK_SDK_P::Access* VideoIdParam::mutable_access() {
+  
+  if (access_ == NULL) {
+    auto* p = CreateMaybeMessage<::HIK_SDK_P::Access>(GetArenaNoVirtual());
+    access_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.VideoIdParam.access)
+  return access_;
+}
+inline void VideoIdParam::set_allocated_access(::HIK_SDK_P::Access* access) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete access_;
+  }
+  if (access) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      access = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, access, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  access_ = access;
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.VideoIdParam.access)
+}
+
+// string videoId = 2;
+inline void VideoIdParam::clear_videoid() {
+  videoid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& VideoIdParam::videoid() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.VideoIdParam.videoId)
+  return videoid_.GetNoArena();
+}
+inline void VideoIdParam::set_videoid(const ::std::string& value) {
+  
+  videoid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.VideoIdParam.videoId)
+}
+#if LANG_CXX11
+inline void VideoIdParam::set_videoid(::std::string&& value) {
+  
+  videoid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:HIK_SDK_P.VideoIdParam.videoId)
+}
+#endif
+inline void VideoIdParam::set_videoid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  videoid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:HIK_SDK_P.VideoIdParam.videoId)
+}
+inline void VideoIdParam::set_videoid(const char* value, size_t size) {
+  
+  videoid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:HIK_SDK_P.VideoIdParam.videoId)
+}
+inline ::std::string* VideoIdParam::mutable_videoid() {
+  
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.VideoIdParam.videoId)
+  return videoid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* VideoIdParam::release_videoid() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.VideoIdParam.videoId)
+  
+  return videoid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void VideoIdParam::set_allocated_videoid(::std::string* videoid) {
+  if (videoid != NULL) {
+    
+  } else {
+    
+  }
+  videoid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), videoid);
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.VideoIdParam.videoId)
+}
+
+// -------------------------------------------------------------------
+
+// VideoURL
+
+// int32 err = 1;
+inline void VideoURL::clear_err() {
+  err_ = 0;
+}
+inline ::google::protobuf::int32 VideoURL::err() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.VideoURL.err)
+  return err_;
+}
+inline void VideoURL::set_err(::google::protobuf::int32 value) {
+  
+  err_ = value;
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.VideoURL.err)
+}
+
+// string URL = 2;
+inline void VideoURL::clear_url() {
+  url_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& VideoURL::url() const {
+  // @@protoc_insertion_point(field_get:HIK_SDK_P.VideoURL.URL)
+  return url_.GetNoArena();
+}
+inline void VideoURL::set_url(const ::std::string& value) {
+  
+  url_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:HIK_SDK_P.VideoURL.URL)
+}
+#if LANG_CXX11
+inline void VideoURL::set_url(::std::string&& value) {
+  
+  url_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:HIK_SDK_P.VideoURL.URL)
+}
+#endif
+inline void VideoURL::set_url(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  url_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:HIK_SDK_P.VideoURL.URL)
+}
+inline void VideoURL::set_url(const char* value, size_t size) {
+  
+  url_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:HIK_SDK_P.VideoURL.URL)
+}
+inline ::std::string* VideoURL::mutable_url() {
+  
+  // @@protoc_insertion_point(field_mutable:HIK_SDK_P.VideoURL.URL)
+  return url_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* VideoURL::release_url() {
+  // @@protoc_insertion_point(field_release:HIK_SDK_P.VideoURL.URL)
+  
+  return url_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void VideoURL::set_allocated_url(::std::string* url) {
+  if (url != NULL) {
+    
+  } else {
+    
+  }
+  url_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), url);
+  // @@protoc_insertion_point(field_set_allocated:HIK_SDK_P.VideoURL.URL)
+}
+
+// -------------------------------------------------------------------
+
 // ErrCode
 
 // int32 errcode = 1;
@@ -2710,6 +4373,20 @@ inline void ErrCode::set_errcode(::google::protobuf::int32 value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

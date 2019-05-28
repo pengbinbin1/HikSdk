@@ -24,12 +24,19 @@ package HIK_SDK_P;
 // The HIK_SDK service definition.
 service HIKSDK {
   // SDK Init
-  rpc Init(LoginInfo) returns (ErrCode){}
+  rpc Init(LoginInfo) returns (InitInfo){}
   rpc Uninit(Empty) returns(ErrCode){}
   rpc SaveFileByTime(SaveFileParam)returns(ErrCode){}
   rpc SaveFileByName(SaveFileParam1)returns(ErrCode){}
   rpc FindFileByTime(FindFileParam)returns(FileData){}
   rpc GetDVRConfig(ConfParam)returns(DeviceList){}
+  rpc GetPort(ConfParam)returns(Port){}
+  
+   //upload local file to aliyun
+  rpc UploadLocalFile(UplodParam)returns(VideoId){}
+  
+	//get play url
+	rpc GetVideoURL(VideoIdParam)returns(VideoURL){}
 }
 
 // The request message containing the user's name.
@@ -41,9 +48,24 @@ message LoginInfo {
   bool useAsynLogin=5;  
 }
 
+message InitInfo{
+    int32 err = 1;
+    int32 deviceType = 2; // device type
+    string deviceSN = 3;  // device Serial Number
+}
+
+//port
+message Port{
+    int32 err = 1;
+    int32 rtsp = 2;   //rtsp port
+    int32 http = 3;   //http port
+    int32 https = 4;  //https port
+    int32 cmd = 5;    //sdk cmd port
+
+}
 //parameters about get config
 message ConfParam{
-  int32 command = 1;  //command
+  int32 command = 1;  //command,when get config set 1062, when get port set 6111
   int32 group = 2;    //group num,start at 0,each group contain 64 channels
 }
 
@@ -59,7 +81,7 @@ message DeviceInfo{
 //device list
 message DeviceList{
   int32 err =1;
-  repeated DeviceInfo DeviceLists = 2;
+  repeated DeviceInfo DeviceLists = 4;
 }
 
 //empty message
@@ -106,6 +128,37 @@ message FindFileParam{
 	Time starttime =1 ;
 	Time stoptime =2;
 	uint64 channel = 3;
+}
+
+//the authinfo
+message Access{
+	string accesskey = 1;
+	string accesskeySecret = 2;
+	string regionId = 3;
+}
+
+// The param about uplaod file
+message UplodParam{
+	Access access = 1;
+	string filename = 2;
+	string videoTitle = 3;
+}
+
+//The response message about upload local video file
+message VideoId{
+	int32   err = 1;
+	string videoId = 2;
+}
+
+// The param about get URL
+message VideoIdParam{
+	Access access = 1;
+	string videoId = 2;
+}
+//The response message about get play URL
+message VideoURL{
+	int32 err =1 ;
+	string URL = 2;
 }
 
 // The response message 

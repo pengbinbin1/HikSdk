@@ -1,0 +1,8 @@
+/root/aliyun-c-sdk-vod/CMakeFiles/install/strip.dir
+/root/aliyun-c-sdk-vod/CMakeFiles/install/local.dir
+/root/aliyun-c-sdk-vod/CMakeFiles/rebuild_cache.dir
+/root/aliyun-c-sdk-vod/CMakeFiles/edit_cache.dir
+/root/aliyun-c-sdk-vod/CMakeFiles/vod_sdk_static.dir
+/root/aliyun-c-sdk-vod/CMakeFiles/install.dir
+/root/aliyun-c-sdk-vod/CMakeFiles/list_install_components.dir
+/root/aliyun-c-sdk-vod/CMakeFiles/vod_sdk.dir

@@ -52,12 +52,12 @@ class HIKSDK final {
    public:
     virtual ~StubInterface() {}
     // SDK Init
-    virtual ::grpc::Status Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::HIK_SDK_P::ErrCode* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::ErrCode>> AsyncInit(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::ErrCode>>(AsyncInitRaw(context, request, cq));
+    virtual ::grpc::Status Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::HIK_SDK_P::InitInfo* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::InitInfo>> AsyncInit(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::InitInfo>>(AsyncInitRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::ErrCode>> PrepareAsyncInit(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::ErrCode>>(PrepareAsyncInitRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::InitInfo>> PrepareAsyncInit(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::InitInfo>>(PrepareAsyncInitRaw(context, request, cq));
     }
     virtual ::grpc::Status Uninit(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty& request, ::HIK_SDK_P::ErrCode* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::ErrCode>> AsyncUninit(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty& request, ::grpc::CompletionQueue* cq) {
@@ -94,21 +94,49 @@ class HIKSDK final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::DeviceList>> PrepareAsyncGetDVRConfig(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::DeviceList>>(PrepareAsyncGetDVRConfigRaw(context, request, cq));
     }
+    virtual ::grpc::Status GetPort(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::HIK_SDK_P::Port* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::Port>> AsyncGetPort(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::Port>>(AsyncGetPortRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::Port>> PrepareAsyncGetPort(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::Port>>(PrepareAsyncGetPortRaw(context, request, cq));
+    }
+    // upload local file to aliyun
+    virtual ::grpc::Status UploadLocalFile(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::HIK_SDK_P::VideoId* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoId>> AsyncUploadLocalFile(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoId>>(AsyncUploadLocalFileRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoId>> PrepareAsyncUploadLocalFile(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoId>>(PrepareAsyncUploadLocalFileRaw(context, request, cq));
+    }
+    // get play url
+    virtual ::grpc::Status GetVideoURL(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::HIK_SDK_P::VideoURL* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoURL>> AsyncGetVideoURL(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoURL>>(AsyncGetVideoURLRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoURL>> PrepareAsyncGetVideoURL(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoURL>>(PrepareAsyncGetVideoURLRaw(context, request, cq));
+    }
     class experimental_async_interface {
      public:
       virtual ~experimental_async_interface() {}
       // SDK Init
-      virtual void Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::ErrCode* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::InitInfo* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Uninit(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty* request, ::HIK_SDK_P::ErrCode* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SaveFileByTime(::grpc::ClientContext* context, const ::HIK_SDK_P::SaveFileParam* request, ::HIK_SDK_P::ErrCode* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SaveFileByName(::grpc::ClientContext* context, const ::HIK_SDK_P::SaveFileParam1* request, ::HIK_SDK_P::ErrCode* response, std::function<void(::grpc::Status)>) = 0;
       virtual void FindFileByTime(::grpc::ClientContext* context, const ::HIK_SDK_P::FindFileParam* request, ::HIK_SDK_P::FileData* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetDVRConfig(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::DeviceList* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetPort(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::Port* response, std::function<void(::grpc::Status)>) = 0;
+      // upload local file to aliyun
+      virtual void UploadLocalFile(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam* request, ::HIK_SDK_P::VideoId* response, std::function<void(::grpc::Status)>) = 0;
+      // get play url
+      virtual void GetVideoURL(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam* request, ::HIK_SDK_P::VideoURL* response, std::function<void(::grpc::Status)>) = 0;
     };
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::ErrCode>* AsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::ErrCode>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::InitInfo>* AsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::InitInfo>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::ErrCode>* AsyncUninitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::ErrCode>* PrepareAsyncUninitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::ErrCode>* AsyncSaveFileByTimeRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::SaveFileParam& request, ::grpc::CompletionQueue* cq) = 0;
@@ -119,16 +147,22 @@ class HIKSDK final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::FileData>* PrepareAsyncFindFileByTimeRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::FindFileParam& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::DeviceList>* AsyncGetDVRConfigRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::DeviceList>* PrepareAsyncGetDVRConfigRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::Port>* AsyncGetPortRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::Port>* PrepareAsyncGetPortRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoId>* AsyncUploadLocalFileRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoId>* PrepareAsyncUploadLocalFileRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoURL>* AsyncGetVideoURLRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::HIK_SDK_P::VideoURL>* PrepareAsyncGetVideoURLRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::HIK_SDK_P::ErrCode* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>> AsyncInit(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>>(AsyncInitRaw(context, request, cq));
+    ::grpc::Status Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::HIK_SDK_P::InitInfo* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::InitInfo>> AsyncInit(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::InitInfo>>(AsyncInitRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>> PrepareAsyncInit(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>>(PrepareAsyncInitRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::InitInfo>> PrepareAsyncInit(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::InitInfo>>(PrepareAsyncInitRaw(context, request, cq));
     }
     ::grpc::Status Uninit(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty& request, ::HIK_SDK_P::ErrCode* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>> AsyncUninit(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty& request, ::grpc::CompletionQueue* cq) {
@@ -165,15 +199,39 @@ class HIKSDK final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::DeviceList>> PrepareAsyncGetDVRConfig(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::DeviceList>>(PrepareAsyncGetDVRConfigRaw(context, request, cq));
     }
+    ::grpc::Status GetPort(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::HIK_SDK_P::Port* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::Port>> AsyncGetPort(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::Port>>(AsyncGetPortRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::Port>> PrepareAsyncGetPort(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::Port>>(PrepareAsyncGetPortRaw(context, request, cq));
+    }
+    ::grpc::Status UploadLocalFile(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::HIK_SDK_P::VideoId* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoId>> AsyncUploadLocalFile(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoId>>(AsyncUploadLocalFileRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoId>> PrepareAsyncUploadLocalFile(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoId>>(PrepareAsyncUploadLocalFileRaw(context, request, cq));
+    }
+    ::grpc::Status GetVideoURL(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::HIK_SDK_P::VideoURL* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoURL>> AsyncGetVideoURL(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoURL>>(AsyncGetVideoURLRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoURL>> PrepareAsyncGetVideoURL(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoURL>>(PrepareAsyncGetVideoURLRaw(context, request, cq));
+    }
     class experimental_async final :
       public StubInterface::experimental_async_interface {
      public:
-      void Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::ErrCode* response, std::function<void(::grpc::Status)>) override;
+      void Init(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::InitInfo* response, std::function<void(::grpc::Status)>) override;
       void Uninit(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty* request, ::HIK_SDK_P::ErrCode* response, std::function<void(::grpc::Status)>) override;
       void SaveFileByTime(::grpc::ClientContext* context, const ::HIK_SDK_P::SaveFileParam* request, ::HIK_SDK_P::ErrCode* response, std::function<void(::grpc::Status)>) override;
       void SaveFileByName(::grpc::ClientContext* context, const ::HIK_SDK_P::SaveFileParam1* request, ::HIK_SDK_P::ErrCode* response, std::function<void(::grpc::Status)>) override;
       void FindFileByTime(::grpc::ClientContext* context, const ::HIK_SDK_P::FindFileParam* request, ::HIK_SDK_P::FileData* response, std::function<void(::grpc::Status)>) override;
       void GetDVRConfig(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::DeviceList* response, std::function<void(::grpc::Status)>) override;
+      void GetPort(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::Port* response, std::function<void(::grpc::Status)>) override;
+      void UploadLocalFile(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam* request, ::HIK_SDK_P::VideoId* response, std::function<void(::grpc::Status)>) override;
+      void GetVideoURL(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam* request, ::HIK_SDK_P::VideoURL* response, std::function<void(::grpc::Status)>) override;
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -185,8 +243,8 @@ class HIKSDK final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class experimental_async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>* AsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::InitInfo>* AsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::InitInfo>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::LoginInfo& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>* AsyncUninitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>* PrepareAsyncUninitRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::Empty& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::ErrCode>* AsyncSaveFileByTimeRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::SaveFileParam& request, ::grpc::CompletionQueue* cq) override;
@@ -197,12 +255,21 @@ class HIKSDK final {
     ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::FileData>* PrepareAsyncFindFileByTimeRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::FindFileParam& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::DeviceList>* AsyncGetDVRConfigRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::DeviceList>* PrepareAsyncGetDVRConfigRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::Port>* AsyncGetPortRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::Port>* PrepareAsyncGetPortRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::ConfParam& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoId>* AsyncUploadLocalFileRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoId>* PrepareAsyncUploadLocalFileRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::UplodParam& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoURL>* AsyncGetVideoURLRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::HIK_SDK_P::VideoURL>* PrepareAsyncGetVideoURLRaw(::grpc::ClientContext* context, const ::HIK_SDK_P::VideoIdParam& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_Init_;
     const ::grpc::internal::RpcMethod rpcmethod_Uninit_;
     const ::grpc::internal::RpcMethod rpcmethod_SaveFileByTime_;
     const ::grpc::internal::RpcMethod rpcmethod_SaveFileByName_;
     const ::grpc::internal::RpcMethod rpcmethod_FindFileByTime_;
     const ::grpc::internal::RpcMethod rpcmethod_GetDVRConfig_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetPort_;
+    const ::grpc::internal::RpcMethod rpcmethod_UploadLocalFile_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetVideoURL_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -211,12 +278,17 @@ class HIKSDK final {
     Service();
     virtual ~Service();
     // SDK Init
-    virtual ::grpc::Status Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::ErrCode* response);
+    virtual ::grpc::Status Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::InitInfo* response);
     virtual ::grpc::Status Uninit(::grpc::ServerContext* context, const ::HIK_SDK_P::Empty* request, ::HIK_SDK_P::ErrCode* response);
     virtual ::grpc::Status SaveFileByTime(::grpc::ServerContext* context, const ::HIK_SDK_P::SaveFileParam* request, ::HIK_SDK_P::ErrCode* response);
     virtual ::grpc::Status SaveFileByName(::grpc::ServerContext* context, const ::HIK_SDK_P::SaveFileParam1* request, ::HIK_SDK_P::ErrCode* response);
     virtual ::grpc::Status FindFileByTime(::grpc::ServerContext* context, const ::HIK_SDK_P::FindFileParam* request, ::HIK_SDK_P::FileData* response);
     virtual ::grpc::Status GetDVRConfig(::grpc::ServerContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::DeviceList* response);
+    virtual ::grpc::Status GetPort(::grpc::ServerContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::Port* response);
+    // upload local file to aliyun
+    virtual ::grpc::Status UploadLocalFile(::grpc::ServerContext* context, const ::HIK_SDK_P::UplodParam* request, ::HIK_SDK_P::VideoId* response);
+    // get play url
+    virtual ::grpc::Status GetVideoURL(::grpc::ServerContext* context, const ::HIK_SDK_P::VideoIdParam* request, ::HIK_SDK_P::VideoURL* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_Init : public BaseClass {
@@ -230,11 +302,11 @@ class HIKSDK final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::ErrCode* response) override {
+    ::grpc::Status Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::InitInfo* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestInit(::grpc::ServerContext* context, ::HIK_SDK_P::LoginInfo* request, ::grpc::ServerAsyncResponseWriter< ::HIK_SDK_P::ErrCode>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestInit(::grpc::ServerContext* context, ::HIK_SDK_P::LoginInfo* request, ::grpc::ServerAsyncResponseWriter< ::HIK_SDK_P::InitInfo>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -338,7 +410,67 @@ class HIKSDK final {
       ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_Init<WithAsyncMethod_Uninit<WithAsyncMethod_SaveFileByTime<WithAsyncMethod_SaveFileByName<WithAsyncMethod_FindFileByTime<WithAsyncMethod_GetDVRConfig<Service > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_GetPort : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_GetPort() {
+      ::grpc::Service::MarkMethodAsync(6);
+    }
+    ~WithAsyncMethod_GetPort() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetPort(::grpc::ServerContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::Port* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetPort(::grpc::ServerContext* context, ::HIK_SDK_P::ConfParam* request, ::grpc::ServerAsyncResponseWriter< ::HIK_SDK_P::Port>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_UploadLocalFile : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_UploadLocalFile() {
+      ::grpc::Service::MarkMethodAsync(7);
+    }
+    ~WithAsyncMethod_UploadLocalFile() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UploadLocalFile(::grpc::ServerContext* context, const ::HIK_SDK_P::UplodParam* request, ::HIK_SDK_P::VideoId* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUploadLocalFile(::grpc::ServerContext* context, ::HIK_SDK_P::UplodParam* request, ::grpc::ServerAsyncResponseWriter< ::HIK_SDK_P::VideoId>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetVideoURL : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_GetVideoURL() {
+      ::grpc::Service::MarkMethodAsync(8);
+    }
+    ~WithAsyncMethod_GetVideoURL() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetVideoURL(::grpc::ServerContext* context, const ::HIK_SDK_P::VideoIdParam* request, ::HIK_SDK_P::VideoURL* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetVideoURL(::grpc::ServerContext* context, ::HIK_SDK_P::VideoIdParam* request, ::grpc::ServerAsyncResponseWriter< ::HIK_SDK_P::VideoURL>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_Init<WithAsyncMethod_Uninit<WithAsyncMethod_SaveFileByTime<WithAsyncMethod_SaveFileByName<WithAsyncMethod_FindFileByTime<WithAsyncMethod_GetDVRConfig<WithAsyncMethod_GetPort<WithAsyncMethod_UploadLocalFile<WithAsyncMethod_GetVideoURL<Service > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_Init : public BaseClass {
    private:
@@ -351,7 +483,7 @@ class HIKSDK final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::ErrCode* response) override {
+    ::grpc::Status Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::InitInfo* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -442,6 +574,57 @@ class HIKSDK final {
     }
   };
   template <class BaseClass>
+  class WithGenericMethod_GetPort : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_GetPort() {
+      ::grpc::Service::MarkMethodGeneric(6);
+    }
+    ~WithGenericMethod_GetPort() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetPort(::grpc::ServerContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::Port* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_UploadLocalFile : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_UploadLocalFile() {
+      ::grpc::Service::MarkMethodGeneric(7);
+    }
+    ~WithGenericMethod_UploadLocalFile() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UploadLocalFile(::grpc::ServerContext* context, const ::HIK_SDK_P::UplodParam* request, ::HIK_SDK_P::VideoId* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetVideoURL : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_GetVideoURL() {
+      ::grpc::Service::MarkMethodGeneric(8);
+    }
+    ~WithGenericMethod_GetVideoURL() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetVideoURL(::grpc::ServerContext* context, const ::HIK_SDK_P::VideoIdParam* request, ::HIK_SDK_P::VideoURL* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
   class WithRawMethod_Init : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
@@ -453,7 +636,7 @@ class HIKSDK final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::ErrCode* response) override {
+    ::grpc::Status Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::InitInfo* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -562,24 +745,84 @@ class HIKSDK final {
     }
   };
   template <class BaseClass>
+  class WithRawMethod_GetPort : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetPort() {
+      ::grpc::Service::MarkMethodRaw(6);
+    }
+    ~WithRawMethod_GetPort() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetPort(::grpc::ServerContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::Port* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetPort(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_UploadLocalFile : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_UploadLocalFile() {
+      ::grpc::Service::MarkMethodRaw(7);
+    }
+    ~WithRawMethod_UploadLocalFile() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status UploadLocalFile(::grpc::ServerContext* context, const ::HIK_SDK_P::UplodParam* request, ::HIK_SDK_P::VideoId* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestUploadLocalFile(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetVideoURL : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_GetVideoURL() {
+      ::grpc::Service::MarkMethodRaw(8);
+    }
+    ~WithRawMethod_GetVideoURL() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetVideoURL(::grpc::ServerContext* context, const ::HIK_SDK_P::VideoIdParam* request, ::HIK_SDK_P::VideoURL* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetVideoURL(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_Init : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithStreamedUnaryMethod_Init() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::internal::StreamedUnaryHandler< ::HIK_SDK_P::LoginInfo, ::HIK_SDK_P::ErrCode>(std::bind(&WithStreamedUnaryMethod_Init<BaseClass>::StreamedInit, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::HIK_SDK_P::LoginInfo, ::HIK_SDK_P::InitInfo>(std::bind(&WithStreamedUnaryMethod_Init<BaseClass>::StreamedInit, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_Init() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::ErrCode* response) override {
+    ::grpc::Status Init(::grpc::ServerContext* context, const ::HIK_SDK_P::LoginInfo* request, ::HIK_SDK_P::InitInfo* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedInit(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::HIK_SDK_P::LoginInfo,::HIK_SDK_P::ErrCode>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedInit(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::HIK_SDK_P::LoginInfo,::HIK_SDK_P::InitInfo>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_Uninit : public BaseClass {
@@ -681,9 +924,69 @@ class HIKSDK final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetDVRConfig(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::HIK_SDK_P::ConfParam,::HIK_SDK_P::DeviceList>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_Uninit<WithStreamedUnaryMethod_SaveFileByTime<WithStreamedUnaryMethod_SaveFileByName<WithStreamedUnaryMethod_FindFileByTime<WithStreamedUnaryMethod_GetDVRConfig<Service > > > > > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetPort : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_GetPort() {
+      ::grpc::Service::MarkMethodStreamed(6,
+        new ::grpc::internal::StreamedUnaryHandler< ::HIK_SDK_P::ConfParam, ::HIK_SDK_P::Port>(std::bind(&WithStreamedUnaryMethod_GetPort<BaseClass>::StreamedGetPort, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_GetPort() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetPort(::grpc::ServerContext* context, const ::HIK_SDK_P::ConfParam* request, ::HIK_SDK_P::Port* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetPort(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::HIK_SDK_P::ConfParam,::HIK_SDK_P::Port>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_UploadLocalFile : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_UploadLocalFile() {
+      ::grpc::Service::MarkMethodStreamed(7,
+        new ::grpc::internal::StreamedUnaryHandler< ::HIK_SDK_P::UplodParam, ::HIK_SDK_P::VideoId>(std::bind(&WithStreamedUnaryMethod_UploadLocalFile<BaseClass>::StreamedUploadLocalFile, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_UploadLocalFile() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status UploadLocalFile(::grpc::ServerContext* context, const ::HIK_SDK_P::UplodParam* request, ::HIK_SDK_P::VideoId* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedUploadLocalFile(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::HIK_SDK_P::UplodParam,::HIK_SDK_P::VideoId>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetVideoURL : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_GetVideoURL() {
+      ::grpc::Service::MarkMethodStreamed(8,
+        new ::grpc::internal::StreamedUnaryHandler< ::HIK_SDK_P::VideoIdParam, ::HIK_SDK_P::VideoURL>(std::bind(&WithStreamedUnaryMethod_GetVideoURL<BaseClass>::StreamedGetVideoURL, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_GetVideoURL() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetVideoURL(::grpc::ServerContext* context, const ::HIK_SDK_P::VideoIdParam* request, ::HIK_SDK_P::VideoURL* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetVideoURL(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::HIK_SDK_P::VideoIdParam,::HIK_SDK_P::VideoURL>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_Uninit<WithStreamedUnaryMethod_SaveFileByTime<WithStreamedUnaryMethod_SaveFileByName<WithStreamedUnaryMethod_FindFileByTime<WithStreamedUnaryMethod_GetDVRConfig<WithStreamedUnaryMethod_GetPort<WithStreamedUnaryMethod_UploadLocalFile<WithStreamedUnaryMethod_GetVideoURL<Service > > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_Uninit<WithStreamedUnaryMethod_SaveFileByTime<WithStreamedUnaryMethod_SaveFileByName<WithStreamedUnaryMethod_FindFileByTime<WithStreamedUnaryMethod_GetDVRConfig<Service > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_Uninit<WithStreamedUnaryMethod_SaveFileByTime<WithStreamedUnaryMethod_SaveFileByName<WithStreamedUnaryMethod_FindFileByTime<WithStreamedUnaryMethod_GetDVRConfig<WithStreamedUnaryMethod_GetPort<WithStreamedUnaryMethod_UploadLocalFile<WithStreamedUnaryMethod_GetVideoURL<Service > > > > > > > > > StreamedService;
 };
 
 }  // namespace HIK_SDK_P

@@ -12,6 +12,10 @@ server: HIK_SDK.grpc.pb.o HIK_SDK.pb.o server.o
 client:  HIK_SDK.grpc.pb.o HIK_SDK.pb.o client.o
 	$(CC) $^ -L /usr/local/lib `pkg-config --libs grpc++ grpc`-Wl,--no-as-needed -lgrpc++_reflection -Wl,--as-needed -lprotobuf -lpthread -ldl -lssl -o $@
 
+.PRECIOUS: %.pb.cc
+%.pb.cc: %.proto
+	protoc --cpp_out=./ $<
+
 clean:
-	rm -rf *.o
+	rm -rf *.o 
 

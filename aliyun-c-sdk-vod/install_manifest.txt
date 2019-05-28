@@ -1,0 +1,5 @@
+/usr/local/lib/libvod_sdk.so.3.0.0
+/usr/local/lib/libvod_sdk.so
+/usr/local/lib/libvod_sdk_static.a
+/usr/local/include/vod_sdk/openApiUtil.h
+/usr/local/include/vod_sdk/upload.h

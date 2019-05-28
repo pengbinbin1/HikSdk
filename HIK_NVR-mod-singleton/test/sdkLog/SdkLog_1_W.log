@@ -1,0 +1,20 @@
+[2018-09-27 16:43:47.812][INF] The COM:Core ver is 5.3.5.2, 2017_11_24. Async:1.
+[2018-09-27 16:43:47.812][INF] This hcnetsdk ver is 5.3.5.2 Ver 2017_11_24.
+[2018-09-27 16:43:47.812][INF] login dev 10.58.123.42:8000.
+[2018-09-27 16:43:48.355][INF] Private connect 10.58.123.42:8000 sock=36 this=0x233c5c4 cmd=0x10000 port=57110
+[2018-09-27 16:43:48.355][INF] LogonDev1 in[10.58.123.42:8000]
+[2018-09-27 16:43:48.430][INF] AbilityAnalyze---Init-- start
+[2018-09-27 16:43:48.711][DBG] AbilityAnalyze---Init-- over, DeviceList path [/home/pengbb/HikSdk/lib/HCNetSDKCom/LocalXml/DeviceList.xml], load result[0]
+[2018-09-27 16:43:48.711][INF] The COM:HCPlayback ver is 5.3.5.2, 2017_11_24.
+[2018-09-27 16:43:48.988][INF] Private connect 10.58.123.42:8000 sock=36 this=0x233c5c4 cmd=0x30100 port=57112
+[2018-09-27 16:43:48.989][INF] [SendCommandWithRecv] linkId=233c5c4, cmd=0x30100
+[2018-09-27 16:43:49.032][DBG] [0]CSearchBaseSession::Stop
+[2018-09-27 16:43:49.035][INF] Private connect 10.58.123.42:8000 sock=36 this=0x233c5c4 cmd=0x11610a port=57114
+[2018-09-27 16:43:49.040][DBG] [CVODSession::Start] VOD Start success, session_id=0
+[2018-09-27 16:43:59.070][INF] [CLongLinkCtrlPrivate::RecvThreadFunc] RecvThreadFunc EXIT, this=0x7ce17014, linkid=233c5c4
+[2018-09-27 16:43:59.070][INF] StopSendThread threadHandle:ffffffff
+[2018-09-27 16:43:59.070][INF] vod -1 in closePlay0 
+[2018-09-27 16:43:59.072][INF] Private connect 10.58.123.42:8000 sock=36 this=0x233c5c4 cmd=0x10100 port=57116
+[2018-09-27 16:43:59.540][ERR] CEzvizTrans::UnloadSSLLib failed
+[2018-09-27 16:43:59.540][INF] CSSLTrans::UnloadSSLLib, Lib Not Load
+[2018-09-27 16:43:59.540][INF] Libiconv, Lib Not Load.

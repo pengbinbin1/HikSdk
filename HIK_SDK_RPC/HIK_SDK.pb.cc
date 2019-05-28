@@ -20,6 +20,7 @@
 // @@protoc_insertion_point(includes)
 
 namespace protobuf_HIK_5fSDK_2eproto {
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_HIK_5fSDK_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Access;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_HIK_5fSDK_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_DeviceInfo;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_HIK_5fSDK_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Time;
 }  // namespace protobuf_HIK_5fSDK_2eproto
@@ -29,6 +30,16 @@ class LoginInfoDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<LoginInfo>
       _instance;
 } _LoginInfo_default_instance_;
+class InitInfoDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<InitInfo>
+      _instance;
+} _InitInfo_default_instance_;
+class PortDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Port>
+      _instance;
+} _Port_default_instance_;
 class ConfParamDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<ConfParam>
@@ -74,6 +85,31 @@ class FindFileParamDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<FindFileParam>
       _instance;
 } _FindFileParam_default_instance_;
+class AccessDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Access>
+      _instance;
+} _Access_default_instance_;
+class UplodParamDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<UplodParam>
+      _instance;
+} _UplodParam_default_instance_;
+class VideoIdDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<VideoId>
+      _instance;
+} _VideoId_default_instance_;
+class VideoIdParamDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<VideoIdParam>
+      _instance;
+} _VideoIdParam_default_instance_;
+class VideoURLDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<VideoURL>
+      _instance;
+} _VideoURL_default_instance_;
 class ErrCodeDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<ErrCode>
@@ -94,6 +130,34 @@ static void InitDefaultsLoginInfo() {
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_LoginInfo =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsLoginInfo}, {}};
+
+static void InitDefaultsInitInfo() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::HIK_SDK_P::_InitInfo_default_instance_;
+    new (ptr) ::HIK_SDK_P::InitInfo();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::HIK_SDK_P::InitInfo::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_InitInfo =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsInitInfo}, {}};
+
+static void InitDefaultsPort() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::HIK_SDK_P::_Port_default_instance_;
+    new (ptr) ::HIK_SDK_P::Port();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::HIK_SDK_P::Port::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_Port =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsPort}, {}};
 
 static void InitDefaultsConfParam() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -225,6 +289,78 @@ static void InitDefaultsFindFileParam() {
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsFindFileParam}, {
       &protobuf_HIK_5fSDK_2eproto::scc_info_Time.base,}};
 
+static void InitDefaultsAccess() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::HIK_SDK_P::_Access_default_instance_;
+    new (ptr) ::HIK_SDK_P::Access();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::HIK_SDK_P::Access::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_Access =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAccess}, {}};
+
+static void InitDefaultsUplodParam() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::HIK_SDK_P::_UplodParam_default_instance_;
+    new (ptr) ::HIK_SDK_P::UplodParam();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::HIK_SDK_P::UplodParam::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_UplodParam =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsUplodParam}, {
+      &protobuf_HIK_5fSDK_2eproto::scc_info_Access.base,}};
+
+static void InitDefaultsVideoId() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::HIK_SDK_P::_VideoId_default_instance_;
+    new (ptr) ::HIK_SDK_P::VideoId();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::HIK_SDK_P::VideoId::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_VideoId =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsVideoId}, {}};
+
+static void InitDefaultsVideoIdParam() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::HIK_SDK_P::_VideoIdParam_default_instance_;
+    new (ptr) ::HIK_SDK_P::VideoIdParam();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::HIK_SDK_P::VideoIdParam::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_VideoIdParam =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsVideoIdParam}, {
+      &protobuf_HIK_5fSDK_2eproto::scc_info_Access.base,}};
+
+static void InitDefaultsVideoURL() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::HIK_SDK_P::_VideoURL_default_instance_;
+    new (ptr) ::HIK_SDK_P::VideoURL();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::HIK_SDK_P::VideoURL::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_VideoURL =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsVideoURL}, {}};
+
 static void InitDefaultsErrCode() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -241,6 +377,8 @@ static void InitDefaultsErrCode() {
 
 void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_LoginInfo.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_InitInfo.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Port.base);
   ::google::protobuf::internal::InitSCC(&scc_info_ConfParam.base);
   ::google::protobuf::internal::InitSCC(&scc_info_DeviceInfo.base);
   ::google::protobuf::internal::InitSCC(&scc_info_DeviceList.base);
@@ -250,10 +388,15 @@ void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_SaveFileParam1.base);
   ::google::protobuf::internal::InitSCC(&scc_info_FileData.base);
   ::google::protobuf::internal::InitSCC(&scc_info_FindFileParam.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Access.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_UplodParam.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_VideoId.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_VideoIdParam.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_VideoURL.base);
   ::google::protobuf::internal::InitSCC(&scc_info_ErrCode.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[11];
+::google::protobuf::Metadata file_level_metadata[18];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -266,6 +409,24 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::LoginInfo, user_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::LoginInfo, passwd_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::LoginInfo, useasynlogin_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::InitInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::InitInfo, err_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::InitInfo, devicetype_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::InitInfo, devicesn_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::Port, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::Port, err_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::Port, rtsp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::Port, http_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::Port, https_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::Port, cmd_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::ConfParam, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -341,6 +502,43 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::FindFileParam, stoptime_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::FindFileParam, channel_),
   ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::Access, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::Access, accesskey_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::Access, accesskeysecret_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::Access, regionid_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::UplodParam, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::UplodParam, access_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::UplodParam, filename_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::UplodParam, videotitle_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::VideoId, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::VideoId, err_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::VideoId, videoid_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::VideoIdParam, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::VideoIdParam, access_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::VideoIdParam, videoid_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::VideoURL, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::VideoURL, err_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::VideoURL, url_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::HIK_SDK_P::ErrCode, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -349,20 +547,29 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::HIK_SDK_P::LoginInfo)},
-  { 10, -1, sizeof(::HIK_SDK_P::ConfParam)},
-  { 17, -1, sizeof(::HIK_SDK_P::DeviceInfo)},
-  { 27, -1, sizeof(::HIK_SDK_P::DeviceList)},
-  { 34, -1, sizeof(::HIK_SDK_P::Empty)},
-  { 39, -1, sizeof(::HIK_SDK_P::Time)},
-  { 50, -1, sizeof(::HIK_SDK_P::SaveFileParam)},
-  { 59, -1, sizeof(::HIK_SDK_P::SaveFileParam1)},
-  { 66, -1, sizeof(::HIK_SDK_P::FileData)},
-  { 76, -1, sizeof(::HIK_SDK_P::FindFileParam)},
-  { 84, -1, sizeof(::HIK_SDK_P::ErrCode)},
+  { 10, -1, sizeof(::HIK_SDK_P::InitInfo)},
+  { 18, -1, sizeof(::HIK_SDK_P::Port)},
+  { 28, -1, sizeof(::HIK_SDK_P::ConfParam)},
+  { 35, -1, sizeof(::HIK_SDK_P::DeviceInfo)},
+  { 45, -1, sizeof(::HIK_SDK_P::DeviceList)},
+  { 52, -1, sizeof(::HIK_SDK_P::Empty)},
+  { 57, -1, sizeof(::HIK_SDK_P::Time)},
+  { 68, -1, sizeof(::HIK_SDK_P::SaveFileParam)},
+  { 77, -1, sizeof(::HIK_SDK_P::SaveFileParam1)},
+  { 84, -1, sizeof(::HIK_SDK_P::FileData)},
+  { 94, -1, sizeof(::HIK_SDK_P::FindFileParam)},
+  { 102, -1, sizeof(::HIK_SDK_P::Access)},
+  { 110, -1, sizeof(::HIK_SDK_P::UplodParam)},
+  { 118, -1, sizeof(::HIK_SDK_P::VideoId)},
+  { 125, -1, sizeof(::HIK_SDK_P::VideoIdParam)},
+  { 132, -1, sizeof(::HIK_SDK_P::VideoURL)},
+  { 139, -1, sizeof(::HIK_SDK_P::ErrCode)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_LoginInfo_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_InitInfo_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_Port_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_ConfParam_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_DeviceInfo_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_DeviceList_default_instance_),
@@ -372,6 +579,11 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_SaveFileParam1_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_FileData_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_FindFileParam_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_Access_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_UplodParam_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_VideoId_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_VideoIdParam_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_VideoURL_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::HIK_SDK_P::_ErrCode_default_instance_),
 };
 
@@ -390,7 +602,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 11);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 18);
 }
 
 void AddDescriptorsImpl() {
@@ -398,40 +610,56 @@ void AddDescriptorsImpl() {
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\rHIK_SDK.proto\022\tHIK_SDK_P\"Y\n\tLoginInfo\022"
       "\n\n\002ip\030\001 \001(\t\022\014\n\004port\030\002 \001(\r\022\014\n\004user\030\003 \001(\t\022"
-      "\016\n\006passwd\030\004 \001(\t\022\024\n\014useAsynLogin\030\005 \001(\010\"+\n"
-      "\tConfParam\022\017\n\007command\030\001 \001(\005\022\r\n\005group\030\002 \001"
-      "(\005\"W\n\nDeviceInfo\022\017\n\007channel\030\001 \001(\005\022\n\n\002ip\030"
-      "\002 \001(\t\022\014\n\004port\030\003 \001(\r\022\014\n\004user\030\004 \001(\t\022\020\n\010pas"
-      "sword\030\005 \001(\t\"E\n\nDeviceList\022\013\n\003err\030\001 \001(\005\022*"
-      "\n\013DeviceLists\030\002 \003(\0132\025.HIK_SDK_P.DeviceIn"
-      "fo\"\007\n\005Empty\"j\n\004Time\022\016\n\006dwYear\030\001 \001(\004\022\017\n\007d"
-      "wMonth\030\002 \001(\004\022\r\n\005dwDay\030\003 \001(\004\022\016\n\006dwHour\030\004 "
-      "\001(\004\022\020\n\010dwMinute\030\005 \001(\004\022\020\n\010dwSecond\030\006 \001(\004\""
-      "y\n\rSaveFileParam\022\"\n\tstarttime\030\001 \001(\0132\017.HI"
-      "K_SDK_P.Time\022!\n\010stoptime\030\002 \001(\0132\017.HIK_SDK"
-      "_P.Time\022\017\n\007channel\030\003 \001(\003\022\020\n\010filename\030\004 \001"
-      "(\t\"2\n\016SaveFileParam1\022\017\n\007nvrfile\030\001 \001(\t\022\017\n"
-      "\007desfile\030\002 \001(\t\"\202\001\n\010FileData\022\020\n\010filename\030"
-      "\001 \001(\t\022\"\n\tstarttime\030\002 \001(\0132\017.HIK_SDK_P.Tim"
-      "e\022!\n\010stoptime\030\003 \001(\0132\017.HIK_SDK_P.Time\022\020\n\010"
-      "filesize\030\004 \001(\003\022\013\n\003err\030\005 \001(\005\"g\n\rFindFileP"
-      "aram\022\"\n\tstarttime\030\001 \001(\0132\017.HIK_SDK_P.Time"
-      "\022!\n\010stoptime\030\002 \001(\0132\017.HIK_SDK_P.Time\022\017\n\007c"
-      "hannel\030\003 \001(\004\"\032\n\007ErrCode\022\017\n\007errcode\030\001 \001(\005"
-      "2\365\002\n\006HIKSDK\0222\n\004Init\022\024.HIK_SDK_P.LoginInf"
-      "o\032\022.HIK_SDK_P.ErrCode\"\000\0220\n\006Uninit\022\020.HIK_"
-      "SDK_P.Empty\032\022.HIK_SDK_P.ErrCode\"\000\022@\n\016Sav"
-      "eFileByTime\022\030.HIK_SDK_P.SaveFileParam\032\022."
-      "HIK_SDK_P.ErrCode\"\000\022A\n\016SaveFileByName\022\031."
-      "HIK_SDK_P.SaveFileParam1\032\022.HIK_SDK_P.Err"
-      "Code\"\000\022A\n\016FindFileByTime\022\030.HIK_SDK_P.Fin"
-      "dFileParam\032\023.HIK_SDK_P.FileData\"\000\022=\n\014Get"
-      "DVRConfig\022\024.HIK_SDK_P.ConfParam\032\025.HIK_SD"
-      "K_P.DeviceList\"\000B \n\016io.grpc.HIKSDKB\006HIKS"
-      "DKP\001\242\002\003HLWb\006proto3"
+      "\016\n\006passwd\030\004 \001(\t\022\024\n\014useAsynLogin\030\005 \001(\010\"=\n"
+      "\010InitInfo\022\013\n\003err\030\001 \001(\005\022\022\n\ndeviceType\030\002 \001"
+      "(\005\022\020\n\010deviceSN\030\003 \001(\t\"K\n\004Port\022\013\n\003err\030\001 \001("
+      "\005\022\014\n\004rtsp\030\002 \001(\005\022\014\n\004http\030\003 \001(\005\022\r\n\005https\030\004"
+      " \001(\005\022\013\n\003cmd\030\005 \001(\005\"+\n\tConfParam\022\017\n\007comman"
+      "d\030\001 \001(\005\022\r\n\005group\030\002 \001(\005\"W\n\nDeviceInfo\022\017\n\007"
+      "channel\030\001 \001(\005\022\n\n\002ip\030\002 \001(\t\022\014\n\004port\030\003 \001(\r\022"
+      "\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\"E\n\nDevic"
+      "eList\022\013\n\003err\030\001 \001(\005\022*\n\013DeviceLists\030\004 \003(\0132"
+      "\025.HIK_SDK_P.DeviceInfo\"\007\n\005Empty\"j\n\004Time\022"
+      "\016\n\006dwYear\030\001 \001(\004\022\017\n\007dwMonth\030\002 \001(\004\022\r\n\005dwDa"
+      "y\030\003 \001(\004\022\016\n\006dwHour\030\004 \001(\004\022\020\n\010dwMinute\030\005 \001("
+      "\004\022\020\n\010dwSecond\030\006 \001(\004\"y\n\rSaveFileParam\022\"\n\t"
+      "starttime\030\001 \001(\0132\017.HIK_SDK_P.Time\022!\n\010stop"
+      "time\030\002 \001(\0132\017.HIK_SDK_P.Time\022\017\n\007channel\030\003"
+      " \001(\003\022\020\n\010filename\030\004 \001(\t\"2\n\016SaveFileParam1"
+      "\022\017\n\007nvrfile\030\001 \001(\t\022\017\n\007desfile\030\002 \001(\t\"\202\001\n\010F"
+      "ileData\022\020\n\010filename\030\001 \001(\t\022\"\n\tstarttime\030\002"
+      " \001(\0132\017.HIK_SDK_P.Time\022!\n\010stoptime\030\003 \001(\0132"
+      "\017.HIK_SDK_P.Time\022\020\n\010filesize\030\004 \001(\003\022\013\n\003er"
+      "r\030\005 \001(\005\"g\n\rFindFileParam\022\"\n\tstarttime\030\001 "
+      "\001(\0132\017.HIK_SDK_P.Time\022!\n\010stoptime\030\002 \001(\0132\017"
+      ".HIK_SDK_P.Time\022\017\n\007channel\030\003 \001(\004\"F\n\006Acce"
+      "ss\022\021\n\taccesskey\030\001 \001(\t\022\027\n\017accesskeySecret"
+      "\030\002 \001(\t\022\020\n\010regionId\030\003 \001(\t\"U\n\nUplodParam\022!"
+      "\n\006access\030\001 \001(\0132\021.HIK_SDK_P.Access\022\020\n\010fil"
+      "ename\030\002 \001(\t\022\022\n\nvideoTitle\030\003 \001(\t\"\'\n\007Video"
+      "Id\022\013\n\003err\030\001 \001(\005\022\017\n\007videoId\030\002 \001(\t\"B\n\014Vide"
+      "oIdParam\022!\n\006access\030\001 \001(\0132\021.HIK_SDK_P.Acc"
+      "ess\022\017\n\007videoId\030\002 \001(\t\"$\n\010VideoURL\022\013\n\003err\030"
+      "\001 \001(\005\022\013\n\003URL\030\002 \001(\t\"\032\n\007ErrCode\022\017\n\007errcode"
+      "\030\001 \001(\0052\251\004\n\006HIKSDK\0223\n\004Init\022\024.HIK_SDK_P.Lo"
+      "ginInfo\032\023.HIK_SDK_P.InitInfo\"\000\0220\n\006Uninit"
+      "\022\020.HIK_SDK_P.Empty\032\022.HIK_SDK_P.ErrCode\"\000"
+      "\022@\n\016SaveFileByTime\022\030.HIK_SDK_P.SaveFileP"
+      "aram\032\022.HIK_SDK_P.ErrCode\"\000\022A\n\016SaveFileBy"
+      "Name\022\031.HIK_SDK_P.SaveFileParam1\032\022.HIK_SD"
+      "K_P.ErrCode\"\000\022A\n\016FindFileByTime\022\030.HIK_SD"
+      "K_P.FindFileParam\032\023.HIK_SDK_P.FileData\"\000"
+      "\022=\n\014GetDVRConfig\022\024.HIK_SDK_P.ConfParam\032\025"
+      ".HIK_SDK_P.DeviceList\"\000\0222\n\007GetPort\022\024.HIK"
+      "_SDK_P.ConfParam\032\017.HIK_SDK_P.Port\"\000\022>\n\017U"
+      "ploadLocalFile\022\025.HIK_SDK_P.UplodParam\032\022."
+      "HIK_SDK_P.VideoId\"\000\022=\n\013GetVideoURL\022\027.HIK"
+      "_SDK_P.VideoIdParam\032\023.HIK_SDK_P.VideoURL"
+      "\"\000B \n\016io.grpc.HIKSDKB\006HIKSDKP\001\242\002\003HLWb\006pr"
+      "oto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1298);
+      descriptor, 1924);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "HIK_SDK.proto", &protobuf_RegisterTypes);
 }
@@ -881,6 +1109,702 @@ void LoginInfo::InternalSwap(LoginInfo* other) {
 }
 
 ::google::protobuf::Metadata LoginInfo::GetMetadata() const {
+  protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void InitInfo::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int InitInfo::kErrFieldNumber;
+const int InitInfo::kDeviceTypeFieldNumber;
+const int InitInfo::kDeviceSNFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+InitInfo::InitInfo()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_HIK_5fSDK_2eproto::scc_info_InitInfo.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:HIK_SDK_P.InitInfo)
+}
+InitInfo::InitInfo(const InitInfo& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  devicesn_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.devicesn().size() > 0) {
+    devicesn_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.devicesn_);
+  }
+  ::memcpy(&err_, &from.err_,
+    static_cast<size_t>(reinterpret_cast<char*>(&devicetype_) -
+    reinterpret_cast<char*>(&err_)) + sizeof(devicetype_));
+  // @@protoc_insertion_point(copy_constructor:HIK_SDK_P.InitInfo)
+}
+
+void InitInfo::SharedCtor() {
+  devicesn_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&err_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&devicetype_) -
+      reinterpret_cast<char*>(&err_)) + sizeof(devicetype_));
+}
+
+InitInfo::~InitInfo() {
+  // @@protoc_insertion_point(destructor:HIK_SDK_P.InitInfo)
+  SharedDtor();
+}
+
+void InitInfo::SharedDtor() {
+  devicesn_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void InitInfo::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* InitInfo::descriptor() {
+  ::protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const InitInfo& InitInfo::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_HIK_5fSDK_2eproto::scc_info_InitInfo.base);
+  return *internal_default_instance();
+}
+
+
+void InitInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:HIK_SDK_P.InitInfo)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  devicesn_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&err_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&devicetype_) -
+      reinterpret_cast<char*>(&err_)) + sizeof(devicetype_));
+  _internal_metadata_.Clear();
+}
+
+bool InitInfo::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:HIK_SDK_P.InitInfo)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 err = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &err_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 deviceType = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &devicetype_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string deviceSN = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_devicesn()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->devicesn().data(), static_cast<int>(this->devicesn().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "HIK_SDK_P.InitInfo.deviceSN"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:HIK_SDK_P.InitInfo)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:HIK_SDK_P.InitInfo)
+  return false;
+#undef DO_
+}
+
+void InitInfo::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:HIK_SDK_P.InitInfo)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->err(), output);
+  }
+
+  // int32 deviceType = 2;
+  if (this->devicetype() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->devicetype(), output);
+  }
+
+  // string deviceSN = 3;
+  if (this->devicesn().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->devicesn().data(), static_cast<int>(this->devicesn().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.InitInfo.deviceSN");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->devicesn(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:HIK_SDK_P.InitInfo)
+}
+
+::google::protobuf::uint8* InitInfo::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:HIK_SDK_P.InitInfo)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->err(), target);
+  }
+
+  // int32 deviceType = 2;
+  if (this->devicetype() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->devicetype(), target);
+  }
+
+  // string deviceSN = 3;
+  if (this->devicesn().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->devicesn().data(), static_cast<int>(this->devicesn().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.InitInfo.deviceSN");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->devicesn(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:HIK_SDK_P.InitInfo)
+  return target;
+}
+
+size_t InitInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:HIK_SDK_P.InitInfo)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string deviceSN = 3;
+  if (this->devicesn().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->devicesn());
+  }
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->err());
+  }
+
+  // int32 deviceType = 2;
+  if (this->devicetype() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->devicetype());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void InitInfo::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:HIK_SDK_P.InitInfo)
+  GOOGLE_DCHECK_NE(&from, this);
+  const InitInfo* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const InitInfo>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:HIK_SDK_P.InitInfo)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:HIK_SDK_P.InitInfo)
+    MergeFrom(*source);
+  }
+}
+
+void InitInfo::MergeFrom(const InitInfo& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:HIK_SDK_P.InitInfo)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.devicesn().size() > 0) {
+
+    devicesn_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.devicesn_);
+  }
+  if (from.err() != 0) {
+    set_err(from.err());
+  }
+  if (from.devicetype() != 0) {
+    set_devicetype(from.devicetype());
+  }
+}
+
+void InitInfo::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:HIK_SDK_P.InitInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void InitInfo::CopyFrom(const InitInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:HIK_SDK_P.InitInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool InitInfo::IsInitialized() const {
+  return true;
+}
+
+void InitInfo::Swap(InitInfo* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void InitInfo::InternalSwap(InitInfo* other) {
+  using std::swap;
+  devicesn_.Swap(&other->devicesn_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(err_, other->err_);
+  swap(devicetype_, other->devicetype_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata InitInfo::GetMetadata() const {
+  protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void Port::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Port::kErrFieldNumber;
+const int Port::kRtspFieldNumber;
+const int Port::kHttpFieldNumber;
+const int Port::kHttpsFieldNumber;
+const int Port::kCmdFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Port::Port()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_HIK_5fSDK_2eproto::scc_info_Port.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:HIK_SDK_P.Port)
+}
+Port::Port(const Port& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&err_, &from.err_,
+    static_cast<size_t>(reinterpret_cast<char*>(&cmd_) -
+    reinterpret_cast<char*>(&err_)) + sizeof(cmd_));
+  // @@protoc_insertion_point(copy_constructor:HIK_SDK_P.Port)
+}
+
+void Port::SharedCtor() {
+  ::memset(&err_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&cmd_) -
+      reinterpret_cast<char*>(&err_)) + sizeof(cmd_));
+}
+
+Port::~Port() {
+  // @@protoc_insertion_point(destructor:HIK_SDK_P.Port)
+  SharedDtor();
+}
+
+void Port::SharedDtor() {
+}
+
+void Port::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* Port::descriptor() {
+  ::protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const Port& Port::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_HIK_5fSDK_2eproto::scc_info_Port.base);
+  return *internal_default_instance();
+}
+
+
+void Port::Clear() {
+// @@protoc_insertion_point(message_clear_start:HIK_SDK_P.Port)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&err_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&cmd_) -
+      reinterpret_cast<char*>(&err_)) + sizeof(cmd_));
+  _internal_metadata_.Clear();
+}
+
+bool Port::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:HIK_SDK_P.Port)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 err = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &err_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 rtsp = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &rtsp_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 http = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &http_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 https = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &https_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int32 cmd = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &cmd_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:HIK_SDK_P.Port)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:HIK_SDK_P.Port)
+  return false;
+#undef DO_
+}
+
+void Port::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:HIK_SDK_P.Port)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->err(), output);
+  }
+
+  // int32 rtsp = 2;
+  if (this->rtsp() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->rtsp(), output);
+  }
+
+  // int32 http = 3;
+  if (this->http() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->http(), output);
+  }
+
+  // int32 https = 4;
+  if (this->https() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->https(), output);
+  }
+
+  // int32 cmd = 5;
+  if (this->cmd() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->cmd(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:HIK_SDK_P.Port)
+}
+
+::google::protobuf::uint8* Port::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:HIK_SDK_P.Port)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->err(), target);
+  }
+
+  // int32 rtsp = 2;
+  if (this->rtsp() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->rtsp(), target);
+  }
+
+  // int32 http = 3;
+  if (this->http() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->http(), target);
+  }
+
+  // int32 https = 4;
+  if (this->https() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->https(), target);
+  }
+
+  // int32 cmd = 5;
+  if (this->cmd() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->cmd(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:HIK_SDK_P.Port)
+  return target;
+}
+
+size_t Port::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:HIK_SDK_P.Port)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // int32 err = 1;
+  if (this->err() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->err());
+  }
+
+  // int32 rtsp = 2;
+  if (this->rtsp() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->rtsp());
+  }
+
+  // int32 http = 3;
+  if (this->http() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->http());
+  }
+
+  // int32 https = 4;
+  if (this->https() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->https());
+  }
+
+  // int32 cmd = 5;
+  if (this->cmd() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->cmd());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Port::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:HIK_SDK_P.Port)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Port* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const Port>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:HIK_SDK_P.Port)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:HIK_SDK_P.Port)
+    MergeFrom(*source);
+  }
+}
+
+void Port::MergeFrom(const Port& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:HIK_SDK_P.Port)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.err() != 0) {
+    set_err(from.err());
+  }
+  if (from.rtsp() != 0) {
+    set_rtsp(from.rtsp());
+  }
+  if (from.http() != 0) {
+    set_http(from.http());
+  }
+  if (from.https() != 0) {
+    set_https(from.https());
+  }
+  if (from.cmd() != 0) {
+    set_cmd(from.cmd());
+  }
+}
+
+void Port::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:HIK_SDK_P.Port)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Port::CopyFrom(const Port& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:HIK_SDK_P.Port)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Port::IsInitialized() const {
+  return true;
+}
+
+void Port::Swap(Port* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Port::InternalSwap(Port* other) {
+  using std::swap;
+  swap(err_, other->err_);
+  swap(rtsp_, other->rtsp_);
+  swap(http_, other->http_);
+  swap(https_, other->https_);
+  swap(cmd_, other->cmd_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata Port::GetMetadata() const {
   protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages];
 }
@@ -1676,10 +2600,10 @@ bool DeviceList::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .HIK_SDK_P.DeviceInfo DeviceLists = 2;
-      case 2: {
+      // repeated .HIK_SDK_P.DeviceInfo DeviceLists = 4;
+      case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_devicelists()));
         } else {
@@ -1719,11 +2643,11 @@ void DeviceList::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->err(), output);
   }
 
-  // repeated .HIK_SDK_P.DeviceInfo DeviceLists = 2;
+  // repeated .HIK_SDK_P.DeviceInfo DeviceLists = 4;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->devicelists_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
+      4,
       this->devicelists(static_cast<int>(i)),
       output);
   }
@@ -1747,12 +2671,12 @@ void DeviceList::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->err(), target);
   }
 
-  // repeated .HIK_SDK_P.DeviceInfo DeviceLists = 2;
+  // repeated .HIK_SDK_P.DeviceInfo DeviceLists = 4;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->devicelists_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->devicelists(static_cast<int>(i)), deterministic, target);
+        4, this->devicelists(static_cast<int>(i)), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1772,7 +2696,7 @@ size_t DeviceList::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated .HIK_SDK_P.DeviceInfo DeviceLists = 2;
+  // repeated .HIK_SDK_P.DeviceInfo DeviceLists = 4;
   {
     unsigned int count = static_cast<unsigned int>(this->devicelists_size());
     total_size += 1UL * count;
@@ -3873,6 +4797,1568 @@ void FindFileParam::InternalSwap(FindFileParam* other) {
 
 // ===================================================================
 
+void Access::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Access::kAccesskeyFieldNumber;
+const int Access::kAccesskeySecretFieldNumber;
+const int Access::kRegionIdFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Access::Access()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_HIK_5fSDK_2eproto::scc_info_Access.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:HIK_SDK_P.Access)
+}
+Access::Access(const Access& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  accesskey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.accesskey().size() > 0) {
+    accesskey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.accesskey_);
+  }
+  accesskeysecret_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.accesskeysecret().size() > 0) {
+    accesskeysecret_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.accesskeysecret_);
+  }
+  regionid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.regionid().size() > 0) {
+    regionid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.regionid_);
+  }
+  // @@protoc_insertion_point(copy_constructor:HIK_SDK_P.Access)
+}
+
+void Access::SharedCtor() {
+  accesskey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  accesskeysecret_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  regionid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+Access::~Access() {
+  // @@protoc_insertion_point(destructor:HIK_SDK_P.Access)
+  SharedDtor();
+}
+
+void Access::SharedDtor() {
+  accesskey_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  accesskeysecret_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  regionid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void Access::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* Access::descriptor() {
+  ::protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const Access& Access::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_HIK_5fSDK_2eproto::scc_info_Access.base);
+  return *internal_default_instance();
+}
+
+
+void Access::Clear() {
+// @@protoc_insertion_point(message_clear_start:HIK_SDK_P.Access)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  accesskey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  accesskeysecret_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  regionid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _internal_metadata_.Clear();
+}
+
+bool Access::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:HIK_SDK_P.Access)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string accesskey = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_accesskey()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->accesskey().data(), static_cast<int>(this->accesskey().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "HIK_SDK_P.Access.accesskey"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string accesskeySecret = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_accesskeysecret()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->accesskeysecret().data(), static_cast<int>(this->accesskeysecret().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "HIK_SDK_P.Access.accesskeySecret"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string regionId = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_regionid()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->regionid().data(), static_cast<int>(this->regionid().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "HIK_SDK_P.Access.regionId"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:HIK_SDK_P.Access)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:HIK_SDK_P.Access)
+  return false;
+#undef DO_
+}
+
+void Access::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:HIK_SDK_P.Access)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string accesskey = 1;
+  if (this->accesskey().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->accesskey().data(), static_cast<int>(this->accesskey().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.Access.accesskey");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->accesskey(), output);
+  }
+
+  // string accesskeySecret = 2;
+  if (this->accesskeysecret().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->accesskeysecret().data(), static_cast<int>(this->accesskeysecret().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.Access.accesskeySecret");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->accesskeysecret(), output);
+  }
+
+  // string regionId = 3;
+  if (this->regionid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->regionid().data(), static_cast<int>(this->regionid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.Access.regionId");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->regionid(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:HIK_SDK_P.Access)
+}
+
+::google::protobuf::uint8* Access::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:HIK_SDK_P.Access)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string accesskey = 1;
+  if (this->accesskey().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->accesskey().data(), static_cast<int>(this->accesskey().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.Access.accesskey");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->accesskey(), target);
+  }
+
+  // string accesskeySecret = 2;
+  if (this->accesskeysecret().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->accesskeysecret().data(), static_cast<int>(this->accesskeysecret().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.Access.accesskeySecret");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->accesskeysecret(), target);
+  }
+
+  // string regionId = 3;
+  if (this->regionid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->regionid().data(), static_cast<int>(this->regionid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.Access.regionId");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->regionid(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:HIK_SDK_P.Access)
+  return target;
+}
+
+size_t Access::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:HIK_SDK_P.Access)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string accesskey = 1;
+  if (this->accesskey().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->accesskey());
+  }
+
+  // string accesskeySecret = 2;
+  if (this->accesskeysecret().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->accesskeysecret());
+  }
+
+  // string regionId = 3;
+  if (this->regionid().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->regionid());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Access::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:HIK_SDK_P.Access)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Access* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const Access>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:HIK_SDK_P.Access)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:HIK_SDK_P.Access)
+    MergeFrom(*source);
+  }
+}
+
+void Access::MergeFrom(const Access& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:HIK_SDK_P.Access)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.accesskey().size() > 0) {
+
+    accesskey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.accesskey_);
+  }
+  if (from.accesskeysecret().size() > 0) {
+
+    accesskeysecret_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.accesskeysecret_);
+  }
+  if (from.regionid().size() > 0) {
+
+    regionid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.regionid_);
+  }
+}
+
+void Access::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:HIK_SDK_P.Access)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Access::CopyFrom(const Access& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:HIK_SDK_P.Access)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Access::IsInitialized() const {
+  return true;
+}
+
+void Access::Swap(Access* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Access::InternalSwap(Access* other) {
+  using std::swap;
+  accesskey_.Swap(&other->accesskey_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  accesskeysecret_.Swap(&other->accesskeysecret_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  regionid_.Swap(&other->regionid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata Access::GetMetadata() const {
+  protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void UplodParam::InitAsDefaultInstance() {
+  ::HIK_SDK_P::_UplodParam_default_instance_._instance.get_mutable()->access_ = const_cast< ::HIK_SDK_P::Access*>(
+      ::HIK_SDK_P::Access::internal_default_instance());
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int UplodParam::kAccessFieldNumber;
+const int UplodParam::kFilenameFieldNumber;
+const int UplodParam::kVideoTitleFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+UplodParam::UplodParam()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_HIK_5fSDK_2eproto::scc_info_UplodParam.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:HIK_SDK_P.UplodParam)
+}
+UplodParam::UplodParam(const UplodParam& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  filename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.filename().size() > 0) {
+    filename_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filename_);
+  }
+  videotitle_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.videotitle().size() > 0) {
+    videotitle_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.videotitle_);
+  }
+  if (from.has_access()) {
+    access_ = new ::HIK_SDK_P::Access(*from.access_);
+  } else {
+    access_ = NULL;
+  }
+  // @@protoc_insertion_point(copy_constructor:HIK_SDK_P.UplodParam)
+}
+
+void UplodParam::SharedCtor() {
+  filename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  videotitle_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  access_ = NULL;
+}
+
+UplodParam::~UplodParam() {
+  // @@protoc_insertion_point(destructor:HIK_SDK_P.UplodParam)
+  SharedDtor();
+}
+
+void UplodParam::SharedDtor() {
+  filename_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  videotitle_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete access_;
+}
+
+void UplodParam::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* UplodParam::descriptor() {
+  ::protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const UplodParam& UplodParam::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_HIK_5fSDK_2eproto::scc_info_UplodParam.base);
+  return *internal_default_instance();
+}
+
+
+void UplodParam::Clear() {
+// @@protoc_insertion_point(message_clear_start:HIK_SDK_P.UplodParam)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  filename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  videotitle_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == NULL && access_ != NULL) {
+    delete access_;
+  }
+  access_ = NULL;
+  _internal_metadata_.Clear();
+}
+
+bool UplodParam::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:HIK_SDK_P.UplodParam)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .HIK_SDK_P.Access access = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_access()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string filename = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_filename()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->filename().data(), static_cast<int>(this->filename().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "HIK_SDK_P.UplodParam.filename"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string videoTitle = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_videotitle()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->videotitle().data(), static_cast<int>(this->videotitle().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "HIK_SDK_P.UplodParam.videoTitle"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:HIK_SDK_P.UplodParam)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:HIK_SDK_P.UplodParam)
+  return false;
+#undef DO_
+}
+
+void UplodParam::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:HIK_SDK_P.UplodParam)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .HIK_SDK_P.Access access = 1;
+  if (this->has_access()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->_internal_access(), output);
+  }
+
+  // string filename = 2;
+  if (this->filename().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filename().data(), static_cast<int>(this->filename().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.UplodParam.filename");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->filename(), output);
+  }
+
+  // string videoTitle = 3;
+  if (this->videotitle().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->videotitle().data(), static_cast<int>(this->videotitle().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.UplodParam.videoTitle");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->videotitle(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:HIK_SDK_P.UplodParam)
+}
+
+::google::protobuf::uint8* UplodParam::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:HIK_SDK_P.UplodParam)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .HIK_SDK_P.Access access = 1;
+  if (this->has_access()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->_internal_access(), deterministic, target);
+  }
+
+  // string filename = 2;
+  if (this->filename().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filename().data(), static_cast<int>(this->filename().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.UplodParam.filename");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->filename(), target);
+  }
+
+  // string videoTitle = 3;
+  if (this->videotitle().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->videotitle().data(), static_cast<int>(this->videotitle().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.UplodParam.videoTitle");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->videotitle(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:HIK_SDK_P.UplodParam)
+  return target;
+}
+
+size_t UplodParam::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:HIK_SDK_P.UplodParam)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string filename = 2;
+  if (this->filename().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->filename());
+  }
+
+  // string videoTitle = 3;
+  if (this->videotitle().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->videotitle());
+  }
+
+  // .HIK_SDK_P.Access access = 1;
+  if (this->has_access()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *access_);
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void UplodParam::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:HIK_SDK_P.UplodParam)
+  GOOGLE_DCHECK_NE(&from, this);
+  const UplodParam* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const UplodParam>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:HIK_SDK_P.UplodParam)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:HIK_SDK_P.UplodParam)
+    MergeFrom(*source);
+  }
+}
+
+void UplodParam::MergeFrom(const UplodParam& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:HIK_SDK_P.UplodParam)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.filename().size() > 0) {
+
+    filename_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filename_);
+  }
+  if (from.videotitle().size() > 0) {
+
+    videotitle_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.videotitle_);
+  }
+  if (from.has_access()) {
+    mutable_access()->::HIK_SDK_P::Access::MergeFrom(from.access());
+  }
+}
+
+void UplodParam::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:HIK_SDK_P.UplodParam)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void UplodParam::CopyFrom(const UplodParam& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:HIK_SDK_P.UplodParam)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool UplodParam::IsInitialized() const {
+  return true;
+}
+
+void UplodParam::Swap(UplodParam* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void UplodParam::InternalSwap(UplodParam* other) {
+  using std::swap;
+  filename_.Swap(&other->filename_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  videotitle_.Swap(&other->videotitle_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(access_, other->access_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata UplodParam::GetMetadata() const {
+  protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void VideoId::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int VideoId::kErrFieldNumber;
+const int VideoId::kVideoIdFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+VideoId::VideoId()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_HIK_5fSDK_2eproto::scc_info_VideoId.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:HIK_SDK_P.VideoId)
+}
+VideoId::VideoId(const VideoId& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  videoid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.videoid().size() > 0) {
+    videoid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.videoid_);
+  }
+  err_ = from.err_;
+  // @@protoc_insertion_point(copy_constructor:HIK_SDK_P.VideoId)
+}
+
+void VideoId::SharedCtor() {
+  videoid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  err_ = 0;
+}
+
+VideoId::~VideoId() {
+  // @@protoc_insertion_point(destructor:HIK_SDK_P.VideoId)
+  SharedDtor();
+}
+
+void VideoId::SharedDtor() {
+  videoid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void VideoId::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* VideoId::descriptor() {
+  ::protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const VideoId& VideoId::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_HIK_5fSDK_2eproto::scc_info_VideoId.base);
+  return *internal_default_instance();
+}
+
+
+void VideoId::Clear() {
+// @@protoc_insertion_point(message_clear_start:HIK_SDK_P.VideoId)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  videoid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  err_ = 0;
+  _internal_metadata_.Clear();
+}
+
+bool VideoId::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:HIK_SDK_P.VideoId)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 err = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &err_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string videoId = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_videoid()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->videoid().data(), static_cast<int>(this->videoid().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "HIK_SDK_P.VideoId.videoId"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:HIK_SDK_P.VideoId)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:HIK_SDK_P.VideoId)
+  return false;
+#undef DO_
+}
+
+void VideoId::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:HIK_SDK_P.VideoId)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->err(), output);
+  }
+
+  // string videoId = 2;
+  if (this->videoid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->videoid().data(), static_cast<int>(this->videoid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.VideoId.videoId");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->videoid(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:HIK_SDK_P.VideoId)
+}
+
+::google::protobuf::uint8* VideoId::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:HIK_SDK_P.VideoId)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->err(), target);
+  }
+
+  // string videoId = 2;
+  if (this->videoid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->videoid().data(), static_cast<int>(this->videoid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.VideoId.videoId");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->videoid(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:HIK_SDK_P.VideoId)
+  return target;
+}
+
+size_t VideoId::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:HIK_SDK_P.VideoId)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string videoId = 2;
+  if (this->videoid().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->videoid());
+  }
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->err());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void VideoId::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:HIK_SDK_P.VideoId)
+  GOOGLE_DCHECK_NE(&from, this);
+  const VideoId* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const VideoId>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:HIK_SDK_P.VideoId)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:HIK_SDK_P.VideoId)
+    MergeFrom(*source);
+  }
+}
+
+void VideoId::MergeFrom(const VideoId& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:HIK_SDK_P.VideoId)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.videoid().size() > 0) {
+
+    videoid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.videoid_);
+  }
+  if (from.err() != 0) {
+    set_err(from.err());
+  }
+}
+
+void VideoId::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:HIK_SDK_P.VideoId)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void VideoId::CopyFrom(const VideoId& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:HIK_SDK_P.VideoId)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool VideoId::IsInitialized() const {
+  return true;
+}
+
+void VideoId::Swap(VideoId* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void VideoId::InternalSwap(VideoId* other) {
+  using std::swap;
+  videoid_.Swap(&other->videoid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(err_, other->err_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata VideoId::GetMetadata() const {
+  protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void VideoIdParam::InitAsDefaultInstance() {
+  ::HIK_SDK_P::_VideoIdParam_default_instance_._instance.get_mutable()->access_ = const_cast< ::HIK_SDK_P::Access*>(
+      ::HIK_SDK_P::Access::internal_default_instance());
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int VideoIdParam::kAccessFieldNumber;
+const int VideoIdParam::kVideoIdFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+VideoIdParam::VideoIdParam()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_HIK_5fSDK_2eproto::scc_info_VideoIdParam.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:HIK_SDK_P.VideoIdParam)
+}
+VideoIdParam::VideoIdParam(const VideoIdParam& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  videoid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.videoid().size() > 0) {
+    videoid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.videoid_);
+  }
+  if (from.has_access()) {
+    access_ = new ::HIK_SDK_P::Access(*from.access_);
+  } else {
+    access_ = NULL;
+  }
+  // @@protoc_insertion_point(copy_constructor:HIK_SDK_P.VideoIdParam)
+}
+
+void VideoIdParam::SharedCtor() {
+  videoid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  access_ = NULL;
+}
+
+VideoIdParam::~VideoIdParam() {
+  // @@protoc_insertion_point(destructor:HIK_SDK_P.VideoIdParam)
+  SharedDtor();
+}
+
+void VideoIdParam::SharedDtor() {
+  videoid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete access_;
+}
+
+void VideoIdParam::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* VideoIdParam::descriptor() {
+  ::protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const VideoIdParam& VideoIdParam::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_HIK_5fSDK_2eproto::scc_info_VideoIdParam.base);
+  return *internal_default_instance();
+}
+
+
+void VideoIdParam::Clear() {
+// @@protoc_insertion_point(message_clear_start:HIK_SDK_P.VideoIdParam)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  videoid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == NULL && access_ != NULL) {
+    delete access_;
+  }
+  access_ = NULL;
+  _internal_metadata_.Clear();
+}
+
+bool VideoIdParam::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:HIK_SDK_P.VideoIdParam)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .HIK_SDK_P.Access access = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_access()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string videoId = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_videoid()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->videoid().data(), static_cast<int>(this->videoid().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "HIK_SDK_P.VideoIdParam.videoId"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:HIK_SDK_P.VideoIdParam)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:HIK_SDK_P.VideoIdParam)
+  return false;
+#undef DO_
+}
+
+void VideoIdParam::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:HIK_SDK_P.VideoIdParam)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .HIK_SDK_P.Access access = 1;
+  if (this->has_access()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->_internal_access(), output);
+  }
+
+  // string videoId = 2;
+  if (this->videoid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->videoid().data(), static_cast<int>(this->videoid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.VideoIdParam.videoId");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->videoid(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:HIK_SDK_P.VideoIdParam)
+}
+
+::google::protobuf::uint8* VideoIdParam::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:HIK_SDK_P.VideoIdParam)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .HIK_SDK_P.Access access = 1;
+  if (this->has_access()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->_internal_access(), deterministic, target);
+  }
+
+  // string videoId = 2;
+  if (this->videoid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->videoid().data(), static_cast<int>(this->videoid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.VideoIdParam.videoId");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->videoid(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:HIK_SDK_P.VideoIdParam)
+  return target;
+}
+
+size_t VideoIdParam::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:HIK_SDK_P.VideoIdParam)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string videoId = 2;
+  if (this->videoid().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->videoid());
+  }
+
+  // .HIK_SDK_P.Access access = 1;
+  if (this->has_access()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *access_);
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void VideoIdParam::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:HIK_SDK_P.VideoIdParam)
+  GOOGLE_DCHECK_NE(&from, this);
+  const VideoIdParam* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const VideoIdParam>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:HIK_SDK_P.VideoIdParam)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:HIK_SDK_P.VideoIdParam)
+    MergeFrom(*source);
+  }
+}
+
+void VideoIdParam::MergeFrom(const VideoIdParam& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:HIK_SDK_P.VideoIdParam)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.videoid().size() > 0) {
+
+    videoid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.videoid_);
+  }
+  if (from.has_access()) {
+    mutable_access()->::HIK_SDK_P::Access::MergeFrom(from.access());
+  }
+}
+
+void VideoIdParam::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:HIK_SDK_P.VideoIdParam)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void VideoIdParam::CopyFrom(const VideoIdParam& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:HIK_SDK_P.VideoIdParam)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool VideoIdParam::IsInitialized() const {
+  return true;
+}
+
+void VideoIdParam::Swap(VideoIdParam* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void VideoIdParam::InternalSwap(VideoIdParam* other) {
+  using std::swap;
+  videoid_.Swap(&other->videoid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(access_, other->access_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata VideoIdParam::GetMetadata() const {
+  protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void VideoURL::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int VideoURL::kErrFieldNumber;
+const int VideoURL::kURLFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+VideoURL::VideoURL()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_HIK_5fSDK_2eproto::scc_info_VideoURL.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:HIK_SDK_P.VideoURL)
+}
+VideoURL::VideoURL(const VideoURL& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  url_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.url().size() > 0) {
+    url_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.url_);
+  }
+  err_ = from.err_;
+  // @@protoc_insertion_point(copy_constructor:HIK_SDK_P.VideoURL)
+}
+
+void VideoURL::SharedCtor() {
+  url_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  err_ = 0;
+}
+
+VideoURL::~VideoURL() {
+  // @@protoc_insertion_point(destructor:HIK_SDK_P.VideoURL)
+  SharedDtor();
+}
+
+void VideoURL::SharedDtor() {
+  url_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void VideoURL::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* VideoURL::descriptor() {
+  ::protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const VideoURL& VideoURL::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_HIK_5fSDK_2eproto::scc_info_VideoURL.base);
+  return *internal_default_instance();
+}
+
+
+void VideoURL::Clear() {
+// @@protoc_insertion_point(message_clear_start:HIK_SDK_P.VideoURL)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  url_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  err_ = 0;
+  _internal_metadata_.Clear();
+}
+
+bool VideoURL::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:HIK_SDK_P.VideoURL)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 err = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &err_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string URL = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_url()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->url().data(), static_cast<int>(this->url().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "HIK_SDK_P.VideoURL.URL"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:HIK_SDK_P.VideoURL)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:HIK_SDK_P.VideoURL)
+  return false;
+#undef DO_
+}
+
+void VideoURL::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:HIK_SDK_P.VideoURL)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->err(), output);
+  }
+
+  // string URL = 2;
+  if (this->url().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->url().data(), static_cast<int>(this->url().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.VideoURL.URL");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->url(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:HIK_SDK_P.VideoURL)
+}
+
+::google::protobuf::uint8* VideoURL::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:HIK_SDK_P.VideoURL)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->err(), target);
+  }
+
+  // string URL = 2;
+  if (this->url().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->url().data(), static_cast<int>(this->url().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "HIK_SDK_P.VideoURL.URL");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->url(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:HIK_SDK_P.VideoURL)
+  return target;
+}
+
+size_t VideoURL::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:HIK_SDK_P.VideoURL)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string URL = 2;
+  if (this->url().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->url());
+  }
+
+  // int32 err = 1;
+  if (this->err() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->err());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void VideoURL::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:HIK_SDK_P.VideoURL)
+  GOOGLE_DCHECK_NE(&from, this);
+  const VideoURL* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const VideoURL>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:HIK_SDK_P.VideoURL)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:HIK_SDK_P.VideoURL)
+    MergeFrom(*source);
+  }
+}
+
+void VideoURL::MergeFrom(const VideoURL& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:HIK_SDK_P.VideoURL)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.url().size() > 0) {
+
+    url_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.url_);
+  }
+  if (from.err() != 0) {
+    set_err(from.err());
+  }
+}
+
+void VideoURL::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:HIK_SDK_P.VideoURL)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void VideoURL::CopyFrom(const VideoURL& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:HIK_SDK_P.VideoURL)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool VideoURL::IsInitialized() const {
+  return true;
+}
+
+void VideoURL::Swap(VideoURL* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void VideoURL::InternalSwap(VideoURL* other) {
+  using std::swap;
+  url_.Swap(&other->url_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(err_, other->err_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata VideoURL::GetMetadata() const {
+  protobuf_HIK_5fSDK_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_HIK_5fSDK_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
 void ErrCode::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -4101,6 +6587,12 @@ namespace protobuf {
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::LoginInfo* Arena::CreateMaybeMessage< ::HIK_SDK_P::LoginInfo >(Arena* arena) {
   return Arena::CreateInternal< ::HIK_SDK_P::LoginInfo >(arena);
 }
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::InitInfo* Arena::CreateMaybeMessage< ::HIK_SDK_P::InitInfo >(Arena* arena) {
+  return Arena::CreateInternal< ::HIK_SDK_P::InitInfo >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::Port* Arena::CreateMaybeMessage< ::HIK_SDK_P::Port >(Arena* arena) {
+  return Arena::CreateInternal< ::HIK_SDK_P::Port >(arena);
+}
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::ConfParam* Arena::CreateMaybeMessage< ::HIK_SDK_P::ConfParam >(Arena* arena) {
   return Arena::CreateInternal< ::HIK_SDK_P::ConfParam >(arena);
 }
@@ -4127,6 +6619,21 @@ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::FileData* Arena::Crea
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::FindFileParam* Arena::CreateMaybeMessage< ::HIK_SDK_P::FindFileParam >(Arena* arena) {
   return Arena::CreateInternal< ::HIK_SDK_P::FindFileParam >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::Access* Arena::CreateMaybeMessage< ::HIK_SDK_P::Access >(Arena* arena) {
+  return Arena::CreateInternal< ::HIK_SDK_P::Access >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::UplodParam* Arena::CreateMaybeMessage< ::HIK_SDK_P::UplodParam >(Arena* arena) {
+  return Arena::CreateInternal< ::HIK_SDK_P::UplodParam >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::VideoId* Arena::CreateMaybeMessage< ::HIK_SDK_P::VideoId >(Arena* arena) {
+  return Arena::CreateInternal< ::HIK_SDK_P::VideoId >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::VideoIdParam* Arena::CreateMaybeMessage< ::HIK_SDK_P::VideoIdParam >(Arena* arena) {
+  return Arena::CreateInternal< ::HIK_SDK_P::VideoIdParam >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::VideoURL* Arena::CreateMaybeMessage< ::HIK_SDK_P::VideoURL >(Arena* arena) {
+  return Arena::CreateInternal< ::HIK_SDK_P::VideoURL >(arena);
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::HIK_SDK_P::ErrCode* Arena::CreateMaybeMessage< ::HIK_SDK_P::ErrCode >(Arena* arena) {
   return Arena::CreateInternal< ::HIK_SDK_P::ErrCode >(arena);
